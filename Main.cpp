@@ -4,7 +4,7 @@
 using namespace Hideandextractdatainimages;
 
 int app_WindowCoding()
-{
+{ 
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	Hideandextractdatainimages::WindowCoding form;

@@ -244,6 +244,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ send
 
 			String^ filename = Path::GetFileName(file);
 			this->C_listBox_Main->Items->Add(filename);
+			this->fileNameMain = &(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
 }
@@ -266,6 +267,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ send
 
 			String^ filename = Path::GetFileName(file);
 			this->C_listBox_Hide->Items->Add(filename);
+			this->fileNameHide = &(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
 }
@@ -287,6 +289,7 @@ System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, S
 
 			String^ filename = Path::GetFileName(file);
 			this->D_listBox->Items->Add(filename);
+			this->fileNameDecoding = &(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
 }
@@ -336,8 +339,11 @@ System::Void WindowCoding::C_button_ResProcess_Start(System::Object^ sender, Sys
 			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 		else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0 )
 			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		else
+		else {
 			MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+			sptr->Coding( *(this->fileNameMain) , *(this->fileNameHide) );
+		}
+
 }
 System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
@@ -345,8 +351,11 @@ System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System
 		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0)
 		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else
+	else {
 		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		sptr->Coding(*(this->fileNameMain), *(this->fileNameHide));
+	}
+
 }
 System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
@@ -354,6 +363,9 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	else if (this->check_ext_D == 0)
 		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else
+	else {
 		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		sptr->Decoding(*(this->fileNameDecoding) );
+	}
+
 }

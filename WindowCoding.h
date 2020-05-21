@@ -1,9 +1,10 @@
 #pragma once
 
 #include <msclr\marshal_cppstd.h>	//To convert String^ to string
-
-namespace Hideandextractdatainimages {
-
+#include "Steganography.h"
+#include <string>
+namespace Hideandextractdatainimages 
+{
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -18,11 +19,12 @@ namespace Hideandextractdatainimages {
 	public ref class WindowCoding : public System::Windows::Forms::Form
 	{
 		public:
-			WindowCoding(void) {
+			WindowCoding(Steganography & obj) {
 				InitializeComponent();
 				this->check_ext_C_Main = -1;
 				this->check_ext_C_Hide = -1;
 				this->check_ext_D = -1;
+				sptr = &obj;
 			}
 		protected:
 			~WindowCoding(){
@@ -87,6 +89,10 @@ namespace Hideandextractdatainimages {
 		int check_ext_C_Main;
 		int check_ext_C_Hide;
 		int check_ext_D;
+		Steganography* sptr;
+		std::string* fileNameMain;
+		std::string* fileNameHide;
+		std::string* fileNameDecoding;
 
 		//String^ fileName;
 		//String^ filePath = "NULL";

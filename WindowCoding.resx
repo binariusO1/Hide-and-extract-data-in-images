@@ -135,7 +135,7 @@
     <value>308, 17</value>
   </metadata>
   <data name="C_button_ResProcess.ToolTip" xml:space="preserve">
-    <value>Resize hide image to size main image</value>
+    <value>Resizing hiding image to size main image</value>
   </data>
   <data name="&gt;&gt;C_button_ResProcess.Name" xml:space="preserve">
     <value>C_button_ResProcess</value>
@@ -417,9 +417,6 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="D_button_Process.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="D_button_Process.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 213</value>
   </data>
@@ -427,7 +424,7 @@
     <value>75, 23</value>
   </data>
   <data name="D_button_Process.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="D_button_Process.Text" xml:space="preserve">
     <value>Process</value>
@@ -517,6 +514,9 @@
     <value>211, 17</value>
   </metadata>
   <data name="D_listBox.ToolTip" xml:space="preserve">
+    <value>Drop image</value>
+  </data>
+  <data name="D_listBox.ToolTip1" xml:space="preserve">
     <value>Drop image</value>
   </data>
   <data name="&gt;&gt;D_listBox.Name" xml:space="preserve">

@@ -20,6 +20,9 @@ namespace Hideandextractdatainimages {
 		public:
 			WindowCoding(void) {
 				InitializeComponent();
+				this->check_ext_C_Main = -1;
+				this->check_ext_C_Hide = -1;
+				this->check_ext_D = -1;
 			}
 		protected:
 			~WindowCoding(){
@@ -58,7 +61,6 @@ namespace Hideandextractdatainimages {
 	private: System::Windows::Forms::ToolTip^ toolTip4;
 	private: System::Windows::Forms::ListBox^ D_listBox;
 
-
 #pragma region Windows Form Designer generated code
 	private:
 		void InitializeComponent(void);
@@ -69,20 +71,25 @@ namespace Hideandextractdatainimages {
 	private:
 		System::Void listBox1_DragDrop_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
 		System::Void listBox1_DragEnter_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void listBox1_DragDrop_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void listBox1_DragEnter_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
 		System::Void C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void C_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void D_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
 
 		System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
 
-		bool WindowCoding::checkFile(std::string path);
-
-
+		int checkFile(std::string path);
 
 	private:
-		int on_off;
-		String^ fileName;
-		String^ filePath = "NULL";
+		int check_ext_C_Main;
+		int check_ext_C_Hide;
+		int check_ext_D;
+
+		//String^ fileName;
+		//String^ filePath = "NULL";
 
 #pragma endregion
 	};

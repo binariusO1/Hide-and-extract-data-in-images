@@ -121,7 +121,10 @@ void WindowCoding::InitializeComponent(void)
 	this->C_listBox_Hide->FormattingEnabled = true;
 	resources->ApplyResources(this->C_listBox_Hide, L"C_listBox_Hide");
 	this->C_listBox_Hide->Name = L"C_listBox_Hide";
+	this->C_listBox_Hide->SelectionMode = System::Windows::Forms::SelectionMode::None;
 	this->toolTip2->SetToolTip(this->C_listBox_Hide, resources->GetString(L"C_listBox_Hide.ToolTip"));
+	this->C_listBox_Hide->DragDrop += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragDrop_C_listBox_Hide);
+	this->C_listBox_Hide->DragEnter += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragEnter_C_listBox_Hide);
 	// 
 	// C_groupBox_Main
 	// 
@@ -166,7 +169,6 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	resources->ApplyResources(this->D_button_Process, L"D_button_Process");
 	this->D_button_Process->Name = L"D_button_Process";
-	this->D_button_Process->UseVisualStyleBackColor = true;
 	this->D_button_Process->Click += gcnew System::EventHandler(this, &WindowCoding::D_button_Process_Start);
 	// 
 	// D_groupBox
@@ -195,7 +197,10 @@ void WindowCoding::InitializeComponent(void)
 	this->D_listBox->FormattingEnabled = true;
 	resources->ApplyResources(this->D_listBox, L"D_listBox");
 	this->D_listBox->Name = L"D_listBox";
+	this->D_listBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
 	this->toolTip3->SetToolTip(this->D_listBox, resources->GetString(L"D_listBox.ToolTip"));
+	this->D_listBox->DragDrop += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragDrop_D_listBox);
+	this->D_listBox->DragEnter += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragEnter_D_listBox);
 	// 
 	// WindowCoding
 	// 
@@ -221,52 +226,87 @@ void WindowCoding::InitializeComponent(void)
 
 }
 
+#include <iostream>
+using namespace std;
 
 //************************************************************
 //		DRAG & DROP EVENTS
 //************************************************************
+// C_Main
 System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
-
 	this->C_listBox_Main->Items->Clear();
 	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
-	//String^ file;
-	for each (String ^ file in files)
-	{
-		if (files->Length == 1)
-		{
-			//MessageBox::Show("Check1: " + on_off + " ");
+	for each (String ^ file in files){
+		if (files->Length == 1){
 			std::string s_file = msclr::interop::marshal_as<std::string>(file);
+			this->check_ext_C_Main = checkFile(s_file);
 
-
-			on_off = checkFile(s_file);
-			String^ filename = fileName = Path::GetFileName(file);
-			filePath = Path::GetDirectoryName(file);
+			String^ filename = Path::GetFileName(file);
 			this->C_listBox_Main->Items->Add(filename);
-			//MessageBox::Show("Filename: " + filename + " "+on_off+" ");
 		}
-
-		//THEN DO WHATEVER YOU WANT TO EACH file in files
 	}
-	
 }
 System::Void WindowCoding::listBox1_DragEnter_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
-	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true)
-	{
+	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true){
 		e->Effect = DragDropEffects::All;
 	}
 }
+
+// C_Hide
+System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+{
+	this->C_listBox_Hide->Items->Clear();
+	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
+	for each (String ^ file in files) {
+		if (files->Length == 1) {
+			std::string s_file = msclr::interop::marshal_as<std::string>(file);
+			this->check_ext_C_Hide = checkFile(s_file);
+
+			String^ filename = Path::GetFileName(file);
+			this->C_listBox_Hide->Items->Add(filename);
+		}
+	}
+}
+System::Void WindowCoding::listBox1_DragEnter_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+{
+	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true) {
+		e->Effect = DragDropEffects::All;
+	}
+}
+// D
+System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+{
+	this->D_listBox->Items->Clear();
+	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
+	for each (String ^ file in files) {
+		if (files->Length == 1) {
+			std::string s_file = msclr::interop::marshal_as<std::string>(file);
+			this->check_ext_D = checkFile(s_file);
+
+			String^ filename = Path::GetFileName(file);
+			this->D_listBox->Items->Add(filename);
+		}
+	}
+}
+System::Void WindowCoding::listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+{
+	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true) {
+		e->Effect = DragDropEffects::All;
+	}
+}
+
+
 System::Void WindowCoding::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
 {
 }
 
-bool WindowCoding::checkFile(std::string path)
+int WindowCoding::checkFile(std::string path)
 {
 	std::fstream file;
 	std::string extension;
-
-	for (int i = path.size() - 1; i >= path.size() - 3; i--)
+	for (size_t i = path.size() - 1; i >= path.size() - 3; i--)
 	{
 		extension += path[i];
 	}
@@ -274,44 +314,46 @@ bool WindowCoding::checkFile(std::string path)
 	if (file.good() == false)
 	{
 		file.close();
-		return 0;
+		return -1;
 	}
-	else if (extension != "jpg" || extension != "png" || extension != "bmp")
-	{
-		extension.clear();
-		file.close();
-		return 0;
-	}
-	else
+	else if (extension == "gpj" || extension == "gnp" || extension == "pmb")
 	{
 		extension.clear();
 		file.close();
 		return 1;
 	}
+	else
+	{
+		extension.clear();
+		file.close();
+		return 0;
+	}
 }
 
 System::Void WindowCoding::C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e)
-	{
-		if (on_off == 0)
+{
+		if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
 			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-
-		else if (on_off == -1)
+		else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0 )
 			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	}
-
+		else
+			MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+}
 System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
-	if (on_off == 0)
+	if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
 		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-
-	else if (on_off == -1)
+	else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0)
 		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	else
+		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 }
 System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
-	if (on_off == 0)
+	if (this->check_ext_D == -1)
 		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-
-	else if (on_off == -1)
+	else if (this->check_ext_D == 0)
 		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	else
+		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 }

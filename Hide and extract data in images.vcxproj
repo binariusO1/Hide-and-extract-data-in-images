@@ -139,10 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Steganography.cpp" />
     <ClCompile Include="WindowCoding.cpp" />
     <ClCompile Include="WindowDecoding.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Steganography.h" />
     <ClInclude Include="WindowCoding.h">
       <FileType>CppForm</FileType>
     </ClInclude>

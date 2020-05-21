@@ -22,6 +22,7 @@ int app_WindowDecoding()
 }
 
 [STAThread]
+
 int main()
 {
 	app_WindowCoding();

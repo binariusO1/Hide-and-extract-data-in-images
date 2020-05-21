@@ -1,5 +1,7 @@
 #pragma once
 
+#include <msclr\marshal_cppstd.h>	//To convert String^ to string
+
 namespace Hideandextractdatainimages {
 
 	using namespace System;
@@ -8,7 +10,10 @@ namespace Hideandextractdatainimages {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	//Drag & Drop
+	using namespace System::Collections::Generic;
+	//Path::GetFileName(file);
+	using namespace System::IO;
 
 	public ref class WindowCoding : public System::Windows::Forms::Form
 	{
@@ -48,6 +53,9 @@ namespace Hideandextractdatainimages {
 	private: System::Windows::Forms::GroupBox^ D_groupBox;
 	private: System::Windows::Forms::Label^ D_label_Height;
 	private: System::Windows::Forms::Label^ D_label_Width;
+	private: System::Windows::Forms::ToolTip^ toolTip2;
+	private: System::Windows::Forms::ToolTip^ toolTip3;
+	private: System::Windows::Forms::ToolTip^ toolTip4;
 	private: System::Windows::Forms::ListBox^ D_listBox;
 
 
@@ -59,9 +67,23 @@ namespace Hideandextractdatainimages {
 //		DRAG & DROP EVENTS
 //************************************************************
 	private:
-		System::Void listBox1_DragDrop(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
-		System::Void listBox1_DragEnter(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void listBox1_DragDrop_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void listBox1_DragEnter_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
+		System::Void C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e);
+		System::Void C_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
+		System::Void D_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
+
 		System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
+
+		bool WindowCoding::checkFile(std::string path);
+
+
+
+	private:
+		int on_off;
+		String^ fileName;
+		String^ filePath = "NULL";
+
 #pragma endregion
 	};
 }

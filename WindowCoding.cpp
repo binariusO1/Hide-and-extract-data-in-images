@@ -1,4 +1,6 @@
 #include "WindowCoding.h"
+#include <string>
+#include <fstream>
 #include <windows.h>
 /*
 using namespace System;
@@ -47,6 +49,9 @@ void WindowCoding::InitializeComponent(void)
 	this->D_label_Width = (gcnew System::Windows::Forms::Label());
 	this->D_listBox = (gcnew System::Windows::Forms::ListBox());
 	this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
+	this->toolTip2 = (gcnew System::Windows::Forms::ToolTip(this->components));
+	this->toolTip3 = (gcnew System::Windows::Forms::ToolTip(this->components));
+	this->toolTip4 = (gcnew System::Windows::Forms::ToolTip(this->components));
 	this->tabControl1->SuspendLayout();
 	this->tabPage1->SuspendLayout();
 	this->C_groupBox_Hide->SuspendLayout();
@@ -79,13 +84,16 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	resources->ApplyResources(this->C_button_ResProcess, L"C_button_ResProcess");
 	this->C_button_ResProcess->Name = L"C_button_ResProcess";
+	this->toolTip4->SetToolTip(this->C_button_ResProcess, resources->GetString(L"C_button_ResProcess.ToolTip"));
 	this->C_button_ResProcess->UseVisualStyleBackColor = true;
+	this->C_button_ResProcess->Click += gcnew System::EventHandler(this, &WindowCoding::C_button_ResProcess_Start);
 	// 
 	// C_button_Process
 	// 
 	resources->ApplyResources(this->C_button_Process, L"C_button_Process");
 	this->C_button_Process->Name = L"C_button_Process";
 	this->C_button_Process->UseVisualStyleBackColor = true;
+	this->C_button_Process->Click += gcnew System::EventHandler(this, &WindowCoding::C_button_Process_Start);
 	// 
 	// C_groupBox_Hide
 	// 
@@ -113,7 +121,7 @@ void WindowCoding::InitializeComponent(void)
 	this->C_listBox_Hide->FormattingEnabled = true;
 	resources->ApplyResources(this->C_listBox_Hide, L"C_listBox_Hide");
 	this->C_listBox_Hide->Name = L"C_listBox_Hide";
-	this->toolTip1->SetToolTip(this->C_listBox_Hide, resources->GetString(L"C_listBox_Hide.ToolTip"));
+	this->toolTip2->SetToolTip(this->C_listBox_Hide, resources->GetString(L"C_listBox_Hide.ToolTip"));
 	// 
 	// C_groupBox_Main
 	// 
@@ -143,8 +151,8 @@ void WindowCoding::InitializeComponent(void)
 	this->C_listBox_Main->Name = L"C_listBox_Main";
 	this->C_listBox_Main->SelectionMode = System::Windows::Forms::SelectionMode::None;
 	this->toolTip1->SetToolTip(this->C_listBox_Main, resources->GetString(L"C_listBox_Main.ToolTip"));
-	this->C_listBox_Main->DragDrop += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragDrop);
-	this->C_listBox_Main->DragEnter += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragEnter);
+	this->C_listBox_Main->DragDrop += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragDrop_C_listBox_Main);
+	this->C_listBox_Main->DragEnter += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragEnter_C_listBox_Main);
 	// 
 	// tabPage2
 	// 
@@ -159,6 +167,7 @@ void WindowCoding::InitializeComponent(void)
 	resources->ApplyResources(this->D_button_Process, L"D_button_Process");
 	this->D_button_Process->Name = L"D_button_Process";
 	this->D_button_Process->UseVisualStyleBackColor = true;
+	this->D_button_Process->Click += gcnew System::EventHandler(this, &WindowCoding::D_button_Process_Start);
 	// 
 	// D_groupBox
 	// 
@@ -186,7 +195,7 @@ void WindowCoding::InitializeComponent(void)
 	this->D_listBox->FormattingEnabled = true;
 	resources->ApplyResources(this->D_listBox, L"D_listBox");
 	this->D_listBox->Name = L"D_listBox";
-	this->toolTip1->SetToolTip(this->D_listBox, resources->GetString(L"D_listBox.ToolTip"));
+	this->toolTip3->SetToolTip(this->D_listBox, resources->GetString(L"D_listBox.ToolTip"));
 	// 
 	// WindowCoding
 	// 
@@ -212,10 +221,14 @@ void WindowCoding::InitializeComponent(void)
 
 }
 
-System::Void WindowCoding::listBox1_DragDrop(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+
+//************************************************************
+//		DRAG & DROP EVENTS
+//************************************************************
+System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
-	/*
-	this->listBox1->Items->Clear();
+
+	this->C_listBox_Main->Items->Clear();
 	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
 	//String^ file;
 	for each (String ^ file in files)
@@ -226,22 +239,18 @@ System::Void WindowCoding::listBox1_DragDrop(System::Object^ sender, System::Win
 			std::string s_file = msclr::interop::marshal_as<std::string>(file);
 
 
-			on_off = fbom_sprawdzenie(s_file);
-			String^ filename = bom_filename = Path::GetFileName(file);
-			bom_filepath = Path::GetDirectoryName(file);
-			this->listBox1->Items->Add(filename);
+			on_off = checkFile(s_file);
+			String^ filename = fileName = Path::GetFileName(file);
+			filePath = Path::GetDirectoryName(file);
+			this->C_listBox_Main->Items->Add(filename);
 			//MessageBox::Show("Filename: " + filename + " "+on_off+" ");
 		}
 
 		//THEN DO WHATEVER YOU WANT TO EACH file in files
 	}
-	*/
+	
 }
-
-//************************************************************
-//		DRAG & DROP EVENTS
-//************************************************************
-System::Void WindowCoding::listBox1_DragEnter(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+System::Void WindowCoding::listBox1_DragEnter_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
 	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true)
 	{
@@ -250,4 +259,59 @@ System::Void WindowCoding::listBox1_DragEnter(System::Object^ sender, System::Wi
 }
 System::Void WindowCoding::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
 {
+}
+
+bool WindowCoding::checkFile(std::string path)
+{
+	std::fstream file;
+	std::string extension;
+
+	for (int i = path.size() - 1; i >= path.size() - 3; i--)
+	{
+		extension += path[i];
+	}
+	file.open(path, std::ios::in);
+	if (file.good() == false)
+	{
+		file.close();
+		return 0;
+	}
+	else if (extension != "jpg" || extension != "png" || extension != "bmp")
+	{
+		extension.clear();
+		file.close();
+		return 0;
+	}
+	else
+	{
+		extension.clear();
+		file.close();
+		return 1;
+	}
+}
+
+System::Void WindowCoding::C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e)
+	{
+		if (on_off == 0)
+			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+
+		else if (on_off == -1)
+			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	}
+
+System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
+{
+	if (on_off == 0)
+		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+
+	else if (on_off == -1)
+		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+}
+System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
+{
+	if (on_off == 0)
+		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+
+	else if (on_off == -1)
+		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 }

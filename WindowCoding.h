@@ -1,9 +1,10 @@
 #pragma once
 
 #include <msclr\marshal_cppstd.h>	//To convert String^ to string
-
-namespace Hideandextractdatainimages {
-
+#include "Steganography.h"
+#include <string>
+namespace Hideandextractdatainimages 
+{
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -18,11 +19,13 @@ namespace Hideandextractdatainimages {
 	public ref class WindowCoding : public System::Windows::Forms::Form
 	{
 		public:
-			WindowCoding(void) {
+			WindowCoding(Steganography & obj) {
 				InitializeComponent();
 				this->check_ext_C_Main = -1;
 				this->check_ext_C_Hide = -1;
 				this->check_ext_D = -1;
+				this->check_size = false;
+				sptr = &obj;
 			}
 		protected:
 			~WindowCoding(){
@@ -50,7 +53,7 @@ namespace Hideandextractdatainimages {
 	private: System::Windows::Forms::Label^ C_label_Height_Hide;
 	private: System::Windows::Forms::Label^ C_label_Width_Hide;
 	private: System::Windows::Forms::ListBox^ C_listBox_Hide;
-	private: System::Windows::Forms::Button^ C_button_ResProcess;
+
 //		D
 	private: System::Windows::Forms::Button^ D_button_Process;
 	private: System::Windows::Forms::GroupBox^ D_groupBox;
@@ -59,6 +62,23 @@ namespace Hideandextractdatainimages {
 	private: System::Windows::Forms::ToolTip^ toolTip2;
 	private: System::Windows::Forms::ToolTip^ toolTip3;
 	private: System::Windows::Forms::ToolTip^ toolTip4;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::GroupBox^ groupBox2;
+	private: System::Windows::Forms::ComboBox^ comboBox3;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::ComboBox^ comboBox4;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::ListBox^ D_listBox;
 
 #pragma region Windows Form Designer generated code
@@ -75,10 +95,8 @@ namespace Hideandextractdatainimages {
 		System::Void listBox1_DragEnter_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
 		System::Void listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
 		System::Void listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
-		System::Void C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void C_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void D_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
-
 		System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
 
 		int checkFile(std::string path);
@@ -87,6 +105,11 @@ namespace Hideandextractdatainimages {
 		int check_ext_C_Main;
 		int check_ext_C_Hide;
 		int check_ext_D;
+		bool check_size;
+		Steganography* sptr;
+		std::string* fileNameMain;
+		std::string* fileNameHide;
+		std::string* fileNameDecoding;
 
 		//String^ fileName;
 		//String^ filePath = "NULL";

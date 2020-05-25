@@ -32,8 +32,13 @@ void WindowCoding::InitializeComponent(void)
 	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(WindowCoding::typeid));
 	this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 	this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-	this->C_button_ResProcess = (gcnew System::Windows::Forms::Button());
+	this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+	this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+	this->label3 = (gcnew System::Windows::Forms::Label());
 	this->C_button_Process = (gcnew System::Windows::Forms::Button());
+	this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+	this->label2 = (gcnew System::Windows::Forms::Label());
+	this->label1 = (gcnew System::Windows::Forms::Label());
 	this->C_groupBox_Hide = (gcnew System::Windows::Forms::GroupBox());
 	this->C_label_Height_Hide = (gcnew System::Windows::Forms::Label());
 	this->C_label_Width_Hide = (gcnew System::Windows::Forms::Label());
@@ -43,8 +48,8 @@ void WindowCoding::InitializeComponent(void)
 	this->C_label_Width_Main = (gcnew System::Windows::Forms::Label());
 	this->C_listBox_Main = (gcnew System::Windows::Forms::ListBox());
 	this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-	this->D_button_Process = (gcnew System::Windows::Forms::Button());
 	this->D_groupBox = (gcnew System::Windows::Forms::GroupBox());
+	this->D_button_Process = (gcnew System::Windows::Forms::Button());
 	this->D_label_Height = (gcnew System::Windows::Forms::Label());
 	this->D_label_Width = (gcnew System::Windows::Forms::Label());
 	this->D_listBox = (gcnew System::Windows::Forms::ListBox());
@@ -52,12 +57,25 @@ void WindowCoding::InitializeComponent(void)
 	this->toolTip2 = (gcnew System::Windows::Forms::ToolTip(this->components));
 	this->toolTip3 = (gcnew System::Windows::Forms::ToolTip(this->components));
 	this->toolTip4 = (gcnew System::Windows::Forms::ToolTip(this->components));
+	this->label4 = (gcnew System::Windows::Forms::Label());
+	this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+	this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+	this->label5 = (gcnew System::Windows::Forms::Label());
+	this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+	this->label6 = (gcnew System::Windows::Forms::Label());
+	this->label7 = (gcnew System::Windows::Forms::Label());
+	this->label8 = (gcnew System::Windows::Forms::Label());
+	this->label9 = (gcnew System::Windows::Forms::Label());
+	this->label10 = (gcnew System::Windows::Forms::Label());
+	this->label11 = (gcnew System::Windows::Forms::Label());
 	this->tabControl1->SuspendLayout();
 	this->tabPage1->SuspendLayout();
+	this->groupBox1->SuspendLayout();
 	this->C_groupBox_Hide->SuspendLayout();
 	this->C_groupBox_Main->SuspendLayout();
 	this->tabPage2->SuspendLayout();
 	this->D_groupBox->SuspendLayout();
+	this->groupBox2->SuspendLayout();
 	this->SuspendLayout();
 	// 
 	// tabControl1
@@ -72,21 +90,40 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	// tabPage1
 	// 
-	this->tabPage1->Controls->Add(this->C_button_ResProcess);
-	this->tabPage1->Controls->Add(this->C_button_Process);
+	this->tabPage1->Controls->Add(this->groupBox1);
 	this->tabPage1->Controls->Add(this->C_groupBox_Hide);
 	this->tabPage1->Controls->Add(this->C_groupBox_Main);
 	resources->ApplyResources(this->tabPage1, L"tabPage1");
 	this->tabPage1->Name = L"tabPage1";
 	this->tabPage1->UseVisualStyleBackColor = true;
 	// 
-	// C_button_ResProcess
+	// groupBox1
 	// 
-	resources->ApplyResources(this->C_button_ResProcess, L"C_button_ResProcess");
-	this->C_button_ResProcess->Name = L"C_button_ResProcess";
-	this->toolTip4->SetToolTip(this->C_button_ResProcess, resources->GetString(L"C_button_ResProcess.ToolTip"));
-	this->C_button_ResProcess->UseVisualStyleBackColor = true;
-	this->C_button_ResProcess->Click += gcnew System::EventHandler(this, &WindowCoding::C_button_ResProcess_Start);
+	this->groupBox1->Controls->Add(this->comboBox2);
+	this->groupBox1->Controls->Add(this->label3);
+	this->groupBox1->Controls->Add(this->C_button_Process);
+	this->groupBox1->Controls->Add(this->comboBox1);
+	this->groupBox1->Controls->Add(this->label2);
+	this->groupBox1->Controls->Add(this->label1);
+	resources->ApplyResources(this->groupBox1, L"groupBox1");
+	this->groupBox1->Name = L"groupBox1";
+	this->groupBox1->TabStop = false;
+	// 
+	// comboBox2
+	// 
+	this->comboBox2->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+	this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+	this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+		resources->GetString(L"comboBox2.Items"), resources->GetString(L"comboBox2.Items1"),
+			resources->GetString(L"comboBox2.Items2")
+	});
+	resources->ApplyResources(this->comboBox2, L"comboBox2");
+	this->comboBox2->Name = L"comboBox2";
+	// 
+	// label3
+	// 
+	resources->ApplyResources(this->label3, L"label3");
+	this->label3->Name = L"label3";
 	// 
 	// C_button_Process
 	// 
@@ -95,8 +132,31 @@ void WindowCoding::InitializeComponent(void)
 	this->C_button_Process->UseVisualStyleBackColor = true;
 	this->C_button_Process->Click += gcnew System::EventHandler(this, &WindowCoding::C_button_Process_Start);
 	// 
+	// comboBox1
+	// 
+	this->comboBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+	this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+	this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+		resources->GetString(L"comboBox1.Items"), resources->GetString(L"comboBox1.Items1"),
+			resources->GetString(L"comboBox1.Items2")
+	});
+	resources->ApplyResources(this->comboBox1, L"comboBox1");
+	this->comboBox1->Name = L"comboBox1";
+	// 
+	// label2
+	// 
+	resources->ApplyResources(this->label2, L"label2");
+	this->label2->Name = L"label2";
+	// 
+	// label1
+	// 
+	resources->ApplyResources(this->label1, L"label1");
+	this->label1->Name = L"label1";
+	// 
 	// C_groupBox_Hide
 	// 
+	this->C_groupBox_Hide->Controls->Add(this->label11);
+	this->C_groupBox_Hide->Controls->Add(this->label10);
 	this->C_groupBox_Hide->Controls->Add(this->C_label_Height_Hide);
 	this->C_groupBox_Hide->Controls->Add(this->C_label_Width_Hide);
 	this->C_groupBox_Hide->Controls->Add(this->C_listBox_Hide);
@@ -128,6 +188,8 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	// C_groupBox_Main
 	// 
+	this->C_groupBox_Main->Controls->Add(this->label9);
+	this->C_groupBox_Main->Controls->Add(this->label8);
 	this->C_groupBox_Main->Controls->Add(this->C_label_Height_Main);
 	this->C_groupBox_Main->Controls->Add(this->C_label_Width_Main);
 	this->C_groupBox_Main->Controls->Add(this->C_listBox_Main);
@@ -159,17 +221,11 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	// tabPage2
 	// 
-	this->tabPage2->Controls->Add(this->D_button_Process);
+	this->tabPage2->Controls->Add(this->groupBox2);
 	this->tabPage2->Controls->Add(this->D_groupBox);
 	resources->ApplyResources(this->tabPage2, L"tabPage2");
 	this->tabPage2->Name = L"tabPage2";
 	this->tabPage2->UseVisualStyleBackColor = true;
-	// 
-	// D_button_Process
-	// 
-	resources->ApplyResources(this->D_button_Process, L"D_button_Process");
-	this->D_button_Process->Name = L"D_button_Process";
-	this->D_button_Process->Click += gcnew System::EventHandler(this, &WindowCoding::D_button_Process_Start);
 	// 
 	// D_groupBox
 	// 
@@ -179,6 +235,12 @@ void WindowCoding::InitializeComponent(void)
 	resources->ApplyResources(this->D_groupBox, L"D_groupBox");
 	this->D_groupBox->Name = L"D_groupBox";
 	this->D_groupBox->TabStop = false;
+	// 
+	// D_button_Process
+	// 
+	resources->ApplyResources(this->D_button_Process, L"D_button_Process");
+	this->D_button_Process->Name = L"D_button_Process";
+	this->D_button_Process->Click += gcnew System::EventHandler(this, &WindowCoding::D_button_Process_Start);
 	// 
 	// D_label_Height
 	// 
@@ -202,12 +264,87 @@ void WindowCoding::InitializeComponent(void)
 	this->D_listBox->DragDrop += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragDrop_D_listBox);
 	this->D_listBox->DragEnter += gcnew System::Windows::Forms::DragEventHandler(this, &WindowCoding::listBox1_DragEnter_D_listBox);
 	// 
+	// label4
+	// 
+	resources->ApplyResources(this->label4, L"label4");
+	this->label4->Name = L"label4";
+	// 
+	// groupBox2
+	// 
+	this->groupBox2->Controls->Add(this->D_button_Process);
+	this->groupBox2->Controls->Add(this->comboBox3);
+	this->groupBox2->Controls->Add(this->label5);
+	this->groupBox2->Controls->Add(this->comboBox4);
+	this->groupBox2->Controls->Add(this->label6);
+	this->groupBox2->Controls->Add(this->label7);
+	resources->ApplyResources(this->groupBox2, L"groupBox2");
+	this->groupBox2->Name = L"groupBox2";
+	this->groupBox2->TabStop = false;
+	// 
+	// comboBox3
+	// 
+	this->comboBox3->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+	this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+	this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+		resources->GetString(L"comboBox3.Items"), resources->GetString(L"comboBox3.Items1"),
+			resources->GetString(L"comboBox3.Items2")
+	});
+	resources->ApplyResources(this->comboBox3, L"comboBox3");
+	this->comboBox3->Name = L"comboBox3";
+	// 
+	// label5
+	// 
+	resources->ApplyResources(this->label5, L"label5");
+	this->label5->Name = L"label5";
+	// 
+	// comboBox4
+	// 
+	this->comboBox4->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+	this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+	this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+		resources->GetString(L"comboBox4.Items"), resources->GetString(L"comboBox4.Items1"),
+			resources->GetString(L"comboBox4.Items2")
+	});
+	resources->ApplyResources(this->comboBox4, L"comboBox4");
+	this->comboBox4->Name = L"comboBox4";
+	// 
+	// label6
+	// 
+	resources->ApplyResources(this->label6, L"label6");
+	this->label6->Name = L"label6";
+	// 
+	// label7
+	// 
+	resources->ApplyResources(this->label7, L"label7");
+	this->label7->Name = L"label7";
+	// 
+	// label8
+	// 
+	resources->ApplyResources(this->label8, L"label8");
+	this->label8->Name = L"label8";
+	// 
+	// label9
+	// 
+	resources->ApplyResources(this->label9, L"label9");
+	this->label9->Name = L"label9";
+	// 
+	// label10
+	// 
+	resources->ApplyResources(this->label10, L"label10");
+	this->label10->Name = L"label10";
+	// 
+	// label11
+	// 
+	resources->ApplyResources(this->label11, L"label11");
+	this->label11->Name = L"label11";
+	// 
 	// WindowCoding
 	// 
 	this->AllowDrop = true;
 	this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 	this->CausesValidation = false;
 	resources->ApplyResources(this, L"$this");
+	this->Controls->Add(this->label4);
 	this->Controls->Add(this->tabControl1);
 	this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 	this->MaximizeBox = false;
@@ -215,6 +352,8 @@ void WindowCoding::InitializeComponent(void)
 	this->ShowIcon = false;
 	this->tabControl1->ResumeLayout(false);
 	this->tabPage1->ResumeLayout(false);
+	this->groupBox1->ResumeLayout(false);
+	this->groupBox1->PerformLayout();
 	this->C_groupBox_Hide->ResumeLayout(false);
 	this->C_groupBox_Hide->PerformLayout();
 	this->C_groupBox_Main->ResumeLayout(false);
@@ -222,7 +361,10 @@ void WindowCoding::InitializeComponent(void)
 	this->tabPage2->ResumeLayout(false);
 	this->D_groupBox->ResumeLayout(false);
 	this->D_groupBox->PerformLayout();
+	this->groupBox2->ResumeLayout(false);
+	this->groupBox2->PerformLayout();
 	this->ResumeLayout(false);
+	this->PerformLayout();
 
 }
 
@@ -244,8 +386,19 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ send
 
 			String^ filename = Path::GetFileName(file);
 			this->C_listBox_Main->Items->Add(filename);
+
+			this->fileNameMain = new std::string(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
+	if(this->check_ext_C_Hide != -1 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0)
+		this->C_button_Process->Enabled = true;
+
+	std::string strR = to_string(sptr->GetImageRows(this->fileNameMain));
+	std::string strC = to_string(sptr->GetImageCols(this->fileNameMain));
+	String^ rows = gcnew String(strR.c_str());
+	String^ cols = gcnew String(strC.c_str());
+	this->label8->Text = rows + L" px";
+	this->label9->Text = cols + L" px";
 }
 System::Void WindowCoding::listBox1_DragEnter_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
@@ -266,8 +419,21 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ send
 
 			String^ filename = Path::GetFileName(file);
 			this->C_listBox_Hide->Items->Add(filename);
+
+			this->fileNameHide = new std::string(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
+	if (this->check_ext_C_Main != -1 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0) {
+		this->C_button_Process->Enabled = true;
+	}
+	else
+		this->C_button_Process->Enabled = false;
+	std::string strR= to_string(sptr->GetImageRows(this->fileNameHide));
+	std::string strC = to_string(sptr->GetImageCols(this->fileNameHide));
+	String^ rows = gcnew String(strR.c_str());
+	String^ cols = gcnew String(strC.c_str());
+	this->label10->Text = rows + L" px";
+	this->label11->Text = cols + L" px";
 }
 System::Void WindowCoding::listBox1_DragEnter_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
@@ -287,8 +453,15 @@ System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, S
 
 			String^ filename = Path::GetFileName(file);
 			this->D_listBox->Items->Add(filename);
+
+			this->fileNameDecoding = new std::string(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
+	if (this->check_ext_D != -1) {
+		this->D_button_Process->Enabled = true;
+	}
+	else
+		this->C_button_Process->Enabled = false;
 }
 System::Void WindowCoding::listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
@@ -330,23 +503,26 @@ int WindowCoding::checkFile(std::string path)
 	}
 }
 
-System::Void WindowCoding::C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e)
-{
-		if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
-			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0 )
-			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		else
-			MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-}
 System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
 	if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
 		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0)
-		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else
+		MessageBox::Show("File extension must be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	else if ((sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) == 0) {
+		MessageBox::Show("Size of main image must be equal or bigger than image to hide", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	}
+	else {
 		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		String^ temp1 = comboBox1->Text;
+		std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
+		int k = strtol(t1.c_str(), NULL, 10);
+		int f = comboBox2->SelectedIndex;
+
+		sptr->Coding( (this->fileNameMain), (this->fileNameHide),k,f,false);
+		cout << "..end of coding" << endl;
+	}
+
 }
 System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
@@ -354,6 +530,12 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	else if (this->check_ext_D == 0)
 		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else
+	else {
 		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		sptr->Decoding(*(this->fileNameDecoding) );
+	}
+
 }
+/*
+	this->comboBox1->SelectedIndex = 0;
+*/

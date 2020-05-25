@@ -118,13 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="C_button_ResProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 212</value>
+  </data>
+  <data name="C_button_ResProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="C_button_ResProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="C_button_ResProcess.Text" xml:space="preserve">
+    <value>Resize and  process</value>
+  </data>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>308, 17</value>
+  </metadata>
+  <data name="C_button_ResProcess.ToolTip" xml:space="preserve">
+    <value>Resizing hiding image to size main image</value>
+  </data>
+  <data name="&gt;&gt;C_button_ResProcess.Name" xml:space="preserve">
+    <value>C_button_ResProcess</value>
+  </data>
+  <data name="&gt;&gt;C_button_ResProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_button_ResProcess.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;C_button_ResProcess.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="C_button_Process.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 212</value>
   </data>
   <data name="C_button_Process.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="C_button_Process.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -141,75 +171,12 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;C_button_Process.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="comboBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="comboBox1.Items" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="comboBox1.Items2" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 63</value>
-  </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 21</value>
-  </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
-    <value>C_groupBox_Hide</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 66</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Last significant bits:</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>C_groupBox_Hide</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="C_label_Height_Hide.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="C_label_Height_Hide.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -235,7 +202,7 @@
     <value>C_groupBox_Hide</value>
   </data>
   <data name="&gt;&gt;C_label_Height_Hide.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="C_label_Width_Hide.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -265,11 +232,8 @@
     <value>C_groupBox_Hide</value>
   </data>
   <data name="&gt;&gt;C_label_Width_Hide.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
-  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
   <data name="C_listBox_Hide.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 19</value>
   </data>
@@ -279,6 +243,9 @@
   <data name="C_listBox_Hide.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
   <data name="C_listBox_Hide.ToolTip" xml:space="preserve">
     <value>Drop image</value>
   </data>
@@ -292,7 +259,7 @@
     <value>C_groupBox_Hide</value>
   </data>
   <data name="&gt;&gt;C_listBox_Hide.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="C_groupBox_Hide.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 111</value>
@@ -316,7 +283,22 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;C_groupBox_Hide.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="C_label_Height_Main.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="C_label_Height_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 66</value>
+  </data>
+  <data name="C_label_Height_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="C_label_Height_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="C_label_Height_Main.Text" xml:space="preserve">
+    <value>Height: </value>
   </data>
   <data name="&gt;&gt;C_label_Height_Main.Name" xml:space="preserve">
     <value>C_label_Height_Main</value>
@@ -330,6 +312,21 @@
   <data name="&gt;&gt;C_label_Height_Main.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="C_label_Width_Main.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="C_label_Width_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 43</value>
+  </data>
+  <data name="C_label_Width_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="C_label_Width_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="C_label_Width_Main.Text" xml:space="preserve">
+    <value>Width: </value>
+  </data>
   <data name="&gt;&gt;C_label_Width_Main.Name" xml:space="preserve">
     <value>C_label_Width_Main</value>
   </data>
@@ -341,6 +338,21 @@
   </data>
   <data name="&gt;&gt;C_label_Width_Main.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="C_listBox_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 19</value>
+  </data>
+  <data name="C_listBox_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 17</value>
+  </data>
+  <data name="C_listBox_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="C_listBox_Main.ToolTip" xml:space="preserve">
+    <value>Drop image</value>
   </data>
   <data name="&gt;&gt;C_listBox_Main.Name" xml:space="preserve">
     <value>C_listBox_Main</value>
@@ -376,7 +388,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;C_groupBox_Main.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -405,6 +417,18 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="D_button_Process.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 213</value>
+  </data>
+  <data name="D_button_Process.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="D_button_Process.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="D_button_Process.Text" xml:space="preserve">
+    <value>Process</value>
+  </data>
   <data name="&gt;&gt;D_button_Process.Name" xml:space="preserve">
     <value>D_button_Process</value>
   </data>
@@ -416,6 +440,108 @@
   </data>
   <data name="&gt;&gt;D_button_Process.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="D_label_Height.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="D_label_Height.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="D_label_Height.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 66</value>
+  </data>
+  <data name="D_label_Height.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="D_label_Height.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="D_label_Height.Text" xml:space="preserve">
+    <value>Height: </value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.Name" xml:space="preserve">
+    <value>D_label_Height</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="D_label_Width.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="D_label_Width.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="D_label_Width.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 43</value>
+  </data>
+  <data name="D_label_Width.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="D_label_Width.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="D_label_Width.Text" xml:space="preserve">
+    <value>Width: </value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.Name" xml:space="preserve">
+    <value>D_label_Width</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="D_listBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 19</value>
+  </data>
+  <data name="D_listBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 17</value>
+  </data>
+  <data name="D_listBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 17</value>
+  </metadata>
+  <data name="D_listBox.ToolTip" xml:space="preserve">
+    <value>Drop image</value>
+  </data>
+  <data name="D_listBox.ToolTip1" xml:space="preserve">
+    <value>Drop image</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.Name" xml:space="preserve">
+    <value>D_listBox</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="D_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="D_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 90</value>
+  </data>
+  <data name="D_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="D_groupBox.Text" xml:space="preserve">
+    <value>Main image</value>
   </data>
   <data name="&gt;&gt;D_groupBox.Name" xml:space="preserve">
     <value>D_groupBox</value>
@@ -483,270 +609,6 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="C_label_Height_Main.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="C_label_Height_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 66</value>
-  </data>
-  <data name="C_label_Height_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="C_label_Height_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="C_label_Height_Main.Text" xml:space="preserve">
-    <value>Height: </value>
-  </data>
-  <data name="&gt;&gt;C_label_Height_Main.Name" xml:space="preserve">
-    <value>C_label_Height_Main</value>
-  </data>
-  <data name="&gt;&gt;C_label_Height_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;C_label_Height_Main.Parent" xml:space="preserve">
-    <value>C_groupBox_Main</value>
-  </data>
-  <data name="&gt;&gt;C_label_Height_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="C_label_Width_Main.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="C_label_Width_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 43</value>
-  </data>
-  <data name="C_label_Width_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
-  </data>
-  <data name="C_label_Width_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="C_label_Width_Main.Text" xml:space="preserve">
-    <value>Width: </value>
-  </data>
-  <data name="&gt;&gt;C_label_Width_Main.Name" xml:space="preserve">
-    <value>C_label_Width_Main</value>
-  </data>
-  <data name="&gt;&gt;C_label_Width_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;C_label_Width_Main.Parent" xml:space="preserve">
-    <value>C_groupBox_Main</value>
-  </data>
-  <data name="&gt;&gt;C_label_Width_Main.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="C_listBox_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 19</value>
-  </data>
-  <data name="C_listBox_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 17</value>
-  </data>
-  <data name="C_listBox_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="C_listBox_Main.ToolTip" xml:space="preserve">
-    <value>Drop image</value>
-  </data>
-  <data name="&gt;&gt;C_listBox_Main.Name" xml:space="preserve">
-    <value>C_listBox_Main</value>
-  </data>
-  <data name="&gt;&gt;C_listBox_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;C_listBox_Main.Parent" xml:space="preserve">
-    <value>C_groupBox_Main</value>
-  </data>
-  <data name="&gt;&gt;C_listBox_Main.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="D_button_Process.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 213</value>
-  </data>
-  <data name="D_button_Process.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="D_button_Process.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="D_button_Process.Text" xml:space="preserve">
-    <value>Process</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.Name" xml:space="preserve">
-    <value>D_button_Process</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.Name" xml:space="preserve">
-    <value>D_label_Height</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.Parent" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.Name" xml:space="preserve">
-    <value>D_label_Width</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.Parent" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.Name" xml:space="preserve">
-    <value>D_listBox</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.Parent" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="D_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="D_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 90</value>
-  </data>
-  <data name="D_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="D_groupBox.Text" xml:space="preserve">
-    <value>Main image</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.Name" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="D_label_Height.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="D_label_Height.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="D_label_Height.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 66</value>
-  </data>
-  <data name="D_label_Height.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="D_label_Height.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="D_label_Height.Text" xml:space="preserve">
-    <value>Height: </value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.Name" xml:space="preserve">
-    <value>D_label_Height</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.Parent" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_label_Height.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="D_label_Width.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="D_label_Width.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="D_label_Width.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 43</value>
-  </data>
-  <data name="D_label_Width.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
-  </data>
-  <data name="D_label_Width.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="D_label_Width.Text" xml:space="preserve">
-    <value>Width: </value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.Name" xml:space="preserve">
-    <value>D_label_Width</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.Parent" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_label_Width.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 17</value>
-  </metadata>
-  <data name="D_listBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 19</value>
-  </data>
-  <data name="D_listBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 17</value>
-  </data>
-  <data name="D_listBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="D_listBox.ToolTip" xml:space="preserve">
-    <value>Drop image</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.Name" xml:space="preserve">
-    <value>D_listBox</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.Parent" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_listBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
-  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 17</value>
-  </metadata>
-  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>308, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

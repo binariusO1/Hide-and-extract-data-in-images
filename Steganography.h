@@ -17,8 +17,8 @@ class Steganography
 public:
 	Steganography() {}
 	~Steganography() = default;
-	bool Coding(const std::string* nameMain, const std::string* nameHide);
-	bool ResCoding(const std::string& nameMain, const std::string& nameHide);
+	bool Coding(const std::string* nameMain, const std::string* nameHide, bool res);
+	//bool ResCoding(const std::string& nameMain, const std::string& nameHide);
 	bool Decoding(const std::string& nameDecoding);
 
 	//void ste
@@ -33,5 +33,7 @@ private:
 
 	bool CheckIfEmpty(const cv::Mat& main, const cv::Mat& hide);
 	bool CompareSize(const cv::Mat& main, const cv::Mat& hide);
+	void Mixchanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat& hide);
+	int cutRGB(const int value1, const int value2);
 	void SaveFile(const cv::Mat& image);
 };

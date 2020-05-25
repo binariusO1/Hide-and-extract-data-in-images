@@ -350,7 +350,7 @@ System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System
 	else {
 		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 		//cout << "1)" << *(this->fileNameMain) << " "<< *(this->fileNameHide)  << endl;
-		sptr->Coding( (this->fileNameMain), (this->fileNameHide));
+		sptr->Coding( (this->fileNameMain), (this->fileNameHide),false);
 		cout << "..end of coding" << endl;
 	}
 
@@ -363,7 +363,7 @@ System::Void WindowCoding::C_button_ResProcess_Start(System::Object^ sender, Sys
 			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 		else {
 			MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-			sptr->ResCoding( *(this->fileNameMain) , *(this->fileNameHide) );
+			sptr->Coding( (this->fileNameMain) , (this->fileNameHide) ,true);
 		}
 
 }

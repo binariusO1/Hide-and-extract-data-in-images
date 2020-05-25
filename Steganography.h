@@ -7,7 +7,6 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 #include <fstream>							//to save file
-#include <bitset>
 
 using namespace std;
 //using namespace cv;
@@ -15,9 +14,12 @@ using namespace std;
 class Steganography
 {
 public:
-	Steganography() {}
+	Steganography()
+	{
+		bit = 4;
+	}
 	~Steganography() = default;
-	bool Coding(const std::string* nameMain, const std::string* nameHide, bool res);
+	bool Coding(const std::string* nameMain, const std::string* nameHide, int b, bool res);
 	//bool ResCoding(const std::string& nameMain, const std::string& nameHide);
 	bool Decoding(const std::string& nameDecoding);
 
@@ -36,4 +38,6 @@ private:
 	void Mixchanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat& hide);
 	int cutRGB(const int value1, const int value2);
 	void SaveFile(const cv::Mat& image);
+
+	int bit;
 };

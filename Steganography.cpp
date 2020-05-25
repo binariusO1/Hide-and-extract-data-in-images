@@ -1,7 +1,8 @@
 #include "Steganography.h"
 
-bool Steganography::Coding( const std::string * nameMain, const std::string*nameHide, bool res=0)
+bool Steganography::Coding( const std::string * nameMain, const std::string*nameHide, int b=4, bool res=0)
 {
+	bit = b;
 	cout << "coding" << endl;
 	cout << *nameMain << endl;
 	cout << *nameHide << endl;
@@ -36,11 +37,12 @@ bool Steganography::Coding( const std::string * nameMain, const std::string*name
 	}
 	else
 	{}
-	
+	/*
 	cv::Vec3b& colorMain = imageMain.at<cv::Vec3b>(0, 0);
 	cv::Vec3b& colorHide = imageHide.at<cv::Vec3b>(0, 0);
 	cout << static_cast<int>( colorMain[0])<< " " << static_cast<int>(colorMain[1]) << " " << static_cast<int>(colorMain[2]) << endl;
 	cout << static_cast<int>( colorHide[0] )<< " " << static_cast<int>(colorHide[1]) << " " << static_cast<int>(colorHide[2]) << endl;
+	*/
 	/*
 	cout << cutRGB(static_cast<int>(colorMain[0])) << " "
 		<< cutRGB(static_cast<int>(colorMain[1])) << " "
@@ -150,19 +152,17 @@ int Steganography::cutRGB(const int value1=0, const int value2 = 0)
 		num2[i] = t2 % 2;
 		t2 = t2 / 2;
 	}
-	for (i = 4; i < 8; i++,j=j*2)
+	for (i = (8-this->bit); i < 8; i++,j=j*2)
 	{
 		rval += num2[i] * j;
 	}
-	//cout << "r: " <<  rval << endl;
-	for (i = 4; i < 8; i++, j = j * 2)
+	for (i = (this->bit); i < 8; i++, j = j * 2)
 	{
 		rval += num1[i] * j;
 	}
-	//cout << "r: " << rval << endl;
 	return rval;
 }
 void Steganography::SaveFile(const cv::Mat& image)
 {
-	cv::imwrite("output.jpg", image);
+	cv::imwrite("output.png", image);
 }

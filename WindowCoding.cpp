@@ -32,9 +32,10 @@ void WindowCoding::InitializeComponent(void)
 	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(WindowCoding::typeid));
 	this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 	this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-	this->C_button_ResProcess = (gcnew System::Windows::Forms::Button());
 	this->C_button_Process = (gcnew System::Windows::Forms::Button());
 	this->C_groupBox_Hide = (gcnew System::Windows::Forms::GroupBox());
+	this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+	this->label1 = (gcnew System::Windows::Forms::Label());
 	this->C_label_Height_Hide = (gcnew System::Windows::Forms::Label());
 	this->C_label_Width_Hide = (gcnew System::Windows::Forms::Label());
 	this->C_listBox_Hide = (gcnew System::Windows::Forms::ListBox());
@@ -72,21 +73,12 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	// tabPage1
 	// 
-	this->tabPage1->Controls->Add(this->C_button_ResProcess);
 	this->tabPage1->Controls->Add(this->C_button_Process);
 	this->tabPage1->Controls->Add(this->C_groupBox_Hide);
 	this->tabPage1->Controls->Add(this->C_groupBox_Main);
 	resources->ApplyResources(this->tabPage1, L"tabPage1");
 	this->tabPage1->Name = L"tabPage1";
 	this->tabPage1->UseVisualStyleBackColor = true;
-	// 
-	// C_button_ResProcess
-	// 
-	resources->ApplyResources(this->C_button_ResProcess, L"C_button_ResProcess");
-	this->C_button_ResProcess->Name = L"C_button_ResProcess";
-	this->toolTip4->SetToolTip(this->C_button_ResProcess, resources->GetString(L"C_button_ResProcess.ToolTip"));
-	this->C_button_ResProcess->UseVisualStyleBackColor = true;
-	this->C_button_ResProcess->Click += gcnew System::EventHandler(this, &WindowCoding::C_button_ResProcess_Start);
 	// 
 	// C_button_Process
 	// 
@@ -97,12 +89,30 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	// C_groupBox_Hide
 	// 
+	this->C_groupBox_Hide->Controls->Add(this->comboBox1);
+	this->C_groupBox_Hide->Controls->Add(this->label1);
 	this->C_groupBox_Hide->Controls->Add(this->C_label_Height_Hide);
 	this->C_groupBox_Hide->Controls->Add(this->C_label_Width_Hide);
 	this->C_groupBox_Hide->Controls->Add(this->C_listBox_Hide);
 	resources->ApplyResources(this->C_groupBox_Hide, L"C_groupBox_Hide");
 	this->C_groupBox_Hide->Name = L"C_groupBox_Hide";
 	this->C_groupBox_Hide->TabStop = false;
+	// 
+	// comboBox1
+	// this->comboBox1->SelectedItem = 0;
+	this->comboBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+	this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+	this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+		resources->GetString(L"comboBox1.Items"), resources->GetString(L"comboBox1.Items1"),
+			resources->GetString(L"comboBox1.Items2")
+	});
+	resources->ApplyResources(this->comboBox1, L"comboBox1");
+	this->comboBox1->SelectedIndex = 0;
+	// 
+	// label1
+	// 
+	resources->ApplyResources(this->label1, L"label1");
+	this->label1->Name = L"label1";
 	// 
 	// C_label_Height_Hide
 	// 
@@ -295,7 +305,6 @@ System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, S
 			this->D_listBox->Items->Add(filename);
 
 			this->fileNameDecoding = new std::string(msclr::interop::marshal_as<std::string>(filename));
-			//cout << "1)" << *(this->fileNameDecoding) << endl;
 		}
 	}
 }
@@ -349,22 +358,12 @@ System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System
 		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	else {
 		MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		//cout << "1)" << *(this->fileNameMain) << " "<< *(this->fileNameHide)  << endl;
-		sptr->Coding( (this->fileNameMain), (this->fileNameHide),false);
+		String^ temp = comboBox1->Text;
+		std::string t = msclr::interop::marshal_as<std::string>(temp);
+		int k = strtol(t.c_str(), NULL, 10);
+		sptr->Coding( (this->fileNameMain), (this->fileNameHide),k,false);
 		cout << "..end of coding" << endl;
 	}
-
-}
-System::Void WindowCoding::C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e)
-{
-		if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
-			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0 )
-			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		else {
-			MessageBox::Show("Good", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-			sptr->Coding( (this->fileNameMain) , (this->fileNameHide) ,true);
-		}
 
 }
 System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)

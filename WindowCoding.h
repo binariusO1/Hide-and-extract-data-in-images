@@ -52,7 +52,7 @@ namespace Hideandextractdatainimages
 	private: System::Windows::Forms::Label^ C_label_Height_Hide;
 	private: System::Windows::Forms::Label^ C_label_Width_Hide;
 	private: System::Windows::Forms::ListBox^ C_listBox_Hide;
-	private: System::Windows::Forms::Button^ C_button_ResProcess;
+
 //		D
 	private: System::Windows::Forms::Button^ D_button_Process;
 	private: System::Windows::Forms::GroupBox^ D_groupBox;
@@ -61,6 +61,8 @@ namespace Hideandextractdatainimages
 	private: System::Windows::Forms::ToolTip^ toolTip2;
 	private: System::Windows::Forms::ToolTip^ toolTip3;
 	private: System::Windows::Forms::ToolTip^ toolTip4;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
 	private: System::Windows::Forms::ListBox^ D_listBox;
 
 #pragma region Windows Form Designer generated code
@@ -77,10 +79,8 @@ namespace Hideandextractdatainimages
 		System::Void listBox1_DragEnter_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
 		System::Void listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
 		System::Void listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e);
-		System::Void C_button_ResProcess_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void C_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void D_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
-
 		System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
 
 		int checkFile(std::string path);

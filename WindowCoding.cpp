@@ -538,7 +538,7 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 		std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
 		int k = strtol(t1.c_str(), NULL, 10);
 		int f = D_options_comboBox_format->SelectedIndex;
-
+		cout << k << endl;
 		sptr->Decoding((this->fileNameDecoding) ,k,f);
 		MessageBox::Show("output_decoding.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	}

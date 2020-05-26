@@ -27,7 +27,6 @@ public:
 	int GetImageRows(const std::string* image);
 	int GetImageCols(const std::string* image);
 
-
 	//void ste
 private:
 	std::string imageNameMain;
@@ -41,9 +40,13 @@ private:
 	bool CheckIfEmpty(const cv::Mat& image);
 	bool CheckIfEmpty(const cv::Mat& main, const cv::Mat& hide);
 	bool CompareSize(const cv::Mat& main, const cv::Mat& hide);
-	void Mixchanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat& hide);
-	int cutRGB(const int value1, const int value2);
+	void MixChanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat& hide);
+	int cutRGB( int value1);
+	int cutRGB( int value1, int value2);
+	void ReadChanels(cv::Mat& temp, const cv::Mat& decoding);
+
 	void SaveFile(const cv::Mat& image);
+	void SaveFileDecoding(const cv::Mat& image);
 
 	int bit;
 	int format;

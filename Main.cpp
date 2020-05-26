@@ -1,5 +1,5 @@
 /*
-2020-05-21 binariusO1
+2020-05-26 binariusO1
 Programing challenge
 Hide and extract data in images
 */

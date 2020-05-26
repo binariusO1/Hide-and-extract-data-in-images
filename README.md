@@ -14,7 +14,7 @@ The program allows you to hide an image in another image.
 <img src="https://i.imgur.com/heDjKZ2.png" alt="CodingMenu" class="center">
 The best resultat gives .png extension.
 
-Coding with 4 last significant bits (we can see cat outline):     Coding with 3 last significant bits:  
+Coding with 4 last significant bits (we can see cat outline) and coding with 3 last significant bits:  
 <img src="https://i.imgur.com/Td6Xth8.png" alt="CodingPNG4bits">      <img src="https://i.imgur.com/aWBNIgI.png" alt="CodingPNG3bits">
 <p></p>
 Coding with 2 last significant bits: 
@@ -26,8 +26,9 @@ Coding with 2 last significant bits:
 
 <img src="https://i.imgur.com/eils1N7.png" alt="DecodingMenu" class="center">
 
-Decoding auto mode  (4 last significant bits)                       Decoding auto mode  (3 last significant bits)   
+Decoding auto mode  (4 last significant bits) and decoding auto mode  (3 last significant bits)   
 <img src="https://i.imgur.com/rrvsMbn.png" alt="DecodingPNG4bits">  <img src="https://i.imgur.com/JsjqRc7.png" alt="DecodingPNG3bits">
+<p></p>
 Decoding auto mode  (2 last significant bits) 
 <img src="https://i.imgur.com/WGCBd3y.png" alt="DecodingPNG2bits" class="center">
 

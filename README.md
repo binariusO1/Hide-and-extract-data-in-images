@@ -15,7 +15,7 @@ The best resultat gives .png extension.
 <p><img src="https://i.imgur.com/EfcW7rf.png" alt="CodingMenu" class="center"></p>
 
 
-Coding with 4 last significant bits (we can see cat ghost) and coding with 3 last significant bits:  
+Coding with 4 last significant bits (we can see sharp cat ghost) and coding with 3 last significant bits:  
 <img src="https://i.imgur.com/Td6Xth8.png" alt="CodingPNG4bits">      <img src="https://i.imgur.com/aWBNIgI.png" alt="CodingPNG3bits">
 <p></p>
 Coding with 2 last significant bits: 

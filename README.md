@@ -22,24 +22,24 @@ Coding with 2 last significant bits:
 <img src="https://i.imgur.com/hJABoe8.png" alt="CodingPNG2bits" class="right">
 
 
-<h3>Decoding</h3>
+<h3>Decoding from .png</h3>
 
 
 <img src="https://i.imgur.com/heDjKZ2.png" alt="DecodingMenu" class="center">
 
-Decoding auto mode  (4 last significant bits) and decoding auto mode  (3 last significant bits)   
+Decoding auto mode  (4 last significant bits) and decoding auto mode  (3 last significant bits):
 <img src="https://i.imgur.com/rrvsMbn.png" alt="DecodingPNG4bits">  <img src="https://i.imgur.com/JsjqRc7.png" alt="DecodingPNG3bits">
 <p></p>
-Decoding auto mode  (2 last significant bits) 
+Decoding auto mode  (2 last significant bits):
 <img src="https://i.imgur.com/WGCBd3y.png" alt="DecodingPNG2bits" class="center">
 
-Decoding jpg:
+<h3>Decoding from .jpg</h3>
 from:
-https://i.imgur.com/gx51Yo4.png
+Decoding with auto mode (4 last significant bits) and decoding wihtout auto mode:
+<img src="hhttps://i.imgur.com/uRflgzs.png" alt="DecodingJPG4bitsAUTO">  <img src="https://i.imgur.com/CEMzQAf.png" alt="DecodingJPG4bits">
+Decoding without auto mode (4 last significant bits) + Denoising option:
+<img src="https://i.imgur.com/IEwRTuk.png" alt="DecodingJPG4bitsBlur" class="center">
 
-https://i.imgur.com/uRflgzs.png
-https://i.imgur.com/CEMzQAf.png
-https://i.imgur.com/IEwRTuk.png
 <h2>License</h2>
 OpenCV:
 <p><a href="https://opencv.org/license/">https://opencv.org/license/</a></p>

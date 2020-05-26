@@ -37,48 +37,56 @@ namespace Hideandextractdatainimages
 //************************************************************
 //		WINDOW FORM ELEMENTS
 //************************************************************
-		private: 
+	//-------------------------------------------------
+	//		OTHER
+	//-------------------------------------------------
+	private: 
 			System::Windows::Forms::TabControl^ tabControl1;
 			System::Windows::Forms::TabPage^ tabPage1;
 			System::Windows::Forms::TabPage^ tabPage2;
 			System::ComponentModel::IContainer^ components;
-//		C
-	private: System::Windows::Forms::ListBox^ C_listBox_Main;
-	private: System::Windows::Forms::GroupBox^ C_groupBox_Main;
-	private: System::Windows::Forms::Label^ C_label_Height_Main;
-	private: System::Windows::Forms::Label^ C_label_Width_Main;
-			System::Windows::Forms::ToolTip^ toolTip1;
+	private: System::Windows::Forms::Label^ label_author;
+	private: System::Windows::Forms::ToolTip^ toolTip2;
+	private: System::Windows::Forms::ToolTip^ toolTip3;
+	private: System::Windows::Forms::ToolTip^ toolTip4;
+	//-------------------------------------------------
+	//		C
+	//-------------------------------------------------
+	private: System::Windows::Forms::ListBox^ C_Main_listBox;
+	private: System::Windows::Forms::GroupBox^ C_Main_groupBox;
+	private: System::Windows::Forms::Label^ C_Main_label_Height;
+	private: System::Windows::Forms::Label^ C_Main_label_Width;
+	private: System::Windows::Forms::ToolTip^ toolTip1;
 	private: System::Windows::Forms::Button^ C_button_Process;
-	private: System::Windows::Forms::GroupBox^ C_groupBox_Hide;
-	private: System::Windows::Forms::Label^ C_label_Height_Hide;
-	private: System::Windows::Forms::Label^ C_label_Width_Hide;
-	private: System::Windows::Forms::ListBox^ C_listBox_Hide;
-
-//		D
+	private: System::Windows::Forms::GroupBox^ C_Hide_groupBox;
+	private: System::Windows::Forms::Label^ C_Hide_label_Height;
+	private: System::Windows::Forms::Label^ C_Hide_label_Width;
+	private: System::Windows::Forms::ListBox^ C_Hide_listBox;
+	private: System::Windows::Forms::Label^ C_Options_label_bits;
+	private: System::Windows::Forms::ComboBox^ C_Options_ComboBox_bits;
+	private: System::Windows::Forms::Label^ C_Options_label_note;
+	private: System::Windows::Forms::GroupBox^ C_Options_GroupBox;
+	private: System::Windows::Forms::ComboBox^ C_Options_ComboBox_format;
+	private: System::Windows::Forms::Label^ C_Options_label_format;
+	private: System::Windows::Forms::Label^ C_Hide_label_Heightpx;
+	private: System::Windows::Forms::Label^ C_Hide_label_Widthpx;
+	private: System::Windows::Forms::Label^ C_Main_label_Heightpx;
+	private: System::Windows::Forms::Label^ C_Main_label_Widthpx;
+	//-------------------------------------------------
+	//		D
+	//-------------------------------------------------
 	private: System::Windows::Forms::Button^ D_button_Process;
 	private: System::Windows::Forms::GroupBox^ D_groupBox;
 	private: System::Windows::Forms::Label^ D_label_Height;
 	private: System::Windows::Forms::Label^ D_label_Width;
-	private: System::Windows::Forms::ToolTip^ toolTip2;
-	private: System::Windows::Forms::ToolTip^ toolTip3;
-	private: System::Windows::Forms::ToolTip^ toolTip4;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::ComboBox^ comboBox2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::GroupBox^ groupBox2;
-	private: System::Windows::Forms::ComboBox^ comboBox3;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::ComboBox^ comboBox4;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::GroupBox^ D_options_groupBox;
+	private: System::Windows::Forms::ComboBox^ D_options_comboBox_format;
+	private: System::Windows::Forms::Label^ D_options_label_format;
+	private: System::Windows::Forms::ComboBox^ D_options_comboBox_bits;
+	private: System::Windows::Forms::Label^ D_options_label_note;
+	private: System::Windows::Forms::Label^ D_options_label_bits;
+	private: System::Windows::Forms::Label^ D_label_Heightpx;
+	private: System::Windows::Forms::Label^ D_label_Widthpx;
 	private: System::Windows::Forms::ListBox^ D_listBox;
 
 #pragma region Windows Form Designer generated code
@@ -101,6 +109,9 @@ namespace Hideandextractdatainimages
 
 		int checkFile(std::string path);
 
+//************************************************************
+//		CLASS COMPONENTS
+//************************************************************
 	private:
 		int check_ext_C_Main;
 		int check_ext_C_Hide;
@@ -110,9 +121,6 @@ namespace Hideandextractdatainimages
 		std::string* fileNameMain;
 		std::string* fileNameHide;
 		std::string* fileNameDecoding;
-
-		//String^ fileName;
-		//String^ filePath = "NULL";
 
 #pragma endregion
 	};

@@ -14,16 +14,19 @@ using namespace std;
 class Steganography
 {
 public:
-	Steganography()
-	{
+	Steganography(){
 		bit = 4;
+		format = 0;
 	}
 	~Steganography() = default;
-	bool Coding(const std::string* nameMain, const std::string* nameHide, int b, int f, bool res);
+	//b - steganography last significants bits, f - output format
+	bool Coding(const std::string* nameMain, const std::string* nameHide, int b, int f);
+	//b - steganography last significants bits, f - output format
+	bool Decoding(const std::string * nameDecoding, int b, int f);
 	bool CompareSizeOut(const std::string* nameMain, const std::string* nameHide);
 	int GetImageRows(const std::string* image);
 	int GetImageCols(const std::string* image);
-	bool Decoding(const std::string& nameDecoding);
+
 
 	//void ste
 private:

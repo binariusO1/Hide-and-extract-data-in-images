@@ -1,4 +1,4 @@
-<h1>070 - Hide and extract data in images</h1>
+<h1>Hide and extract data in images</h1>
 <b>(Steganography)</b>
 <p></p>
 <img src="https://img.shields.io/badge/C++-17 | opencv-blue" title="hover text">
@@ -12,7 +12,7 @@ The program allows you to hide an image in another image.
 <h3>Coding</h3>
 
 The best resultat gives .png extension.
-<p><img src="https://i.imgur.com/eils1N7.png" alt="CodingMenu" class="center"></p>
+<p><img src="https://i.imgur.com/EfcW7rf.png" alt="CodingMenu" class="center"></p>
 
 
 Coding with 4 last significant bits (we can see cat outline) and coding with 3 last significant bits:  

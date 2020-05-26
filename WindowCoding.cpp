@@ -36,6 +36,7 @@ void WindowCoding::InitializeComponent(void)
 	this->C_Main_listBox = (gcnew System::Windows::Forms::ListBox());
 	this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 	this->D_options_groupBox = (gcnew System::Windows::Forms::GroupBox());
+	this->D_options_checkBox = (gcnew System::Windows::Forms::CheckBox());
 	this->D_button_Process = (gcnew System::Windows::Forms::Button());
 	this->D_options_comboBox_format = (gcnew System::Windows::Forms::ComboBox());
 	this->D_options_label_format = (gcnew System::Windows::Forms::Label());
@@ -234,6 +235,7 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	// D_options_groupBox
 	// 
+	this->D_options_groupBox->Controls->Add(this->D_options_checkBox);
 	this->D_options_groupBox->Controls->Add(this->D_button_Process);
 	this->D_options_groupBox->Controls->Add(this->D_options_comboBox_format);
 	this->D_options_groupBox->Controls->Add(this->D_options_label_format);
@@ -243,6 +245,13 @@ void WindowCoding::InitializeComponent(void)
 	resources->ApplyResources(this->D_options_groupBox, L"D_options_groupBox");
 	this->D_options_groupBox->Name = L"D_options_groupBox";
 	this->D_options_groupBox->TabStop = false;
+	// 
+	// D_options_checkBox
+	// 
+	resources->ApplyResources(this->D_options_checkBox, L"D_options_checkBox");
+	this->D_options_checkBox->Name = L"D_options_checkBox";
+	this->D_options_checkBox->UseVisualStyleBackColor = true;
+	this->D_options_checkBox->CheckedChanged += gcnew System::EventHandler(this, &WindowCoding::D_options_checkedChanged);
 	// 
 	// D_button_Process
 	// 
@@ -259,6 +268,7 @@ void WindowCoding::InitializeComponent(void)
 			resources->GetString(L"D_options_comboBox_format.Items1"), resources->GetString(L"D_options_comboBox_format.Items2")
 	});
 	resources->ApplyResources(this->D_options_comboBox_format, L"D_options_comboBox_format");
+	this->D_options_comboBox_format->Name = L"D_options_comboBox_format";
 	this->D_options_comboBox_format->SelectedIndex = 0;
 	// 
 	// D_options_label_format
@@ -275,6 +285,7 @@ void WindowCoding::InitializeComponent(void)
 			resources->GetString(L"D_options_comboBox_bits.Items1"), resources->GetString(L"D_options_comboBox_bits.Items2"), resources->GetString(L"D_options_comboBox_bits.Items3")
 	});
 	resources->ApplyResources(this->D_options_comboBox_bits, L"D_options_comboBox_bits");
+	this->D_options_comboBox_bits->Name = L"D_options_comboBox_bits";
 	this->D_options_comboBox_bits->SelectedIndex = 0;
 	// 
 	// D_options_label_note
@@ -362,16 +373,20 @@ void WindowCoding::InitializeComponent(void)
 	this->D_groupBox->PerformLayout();
 	this->ResumeLayout(false);
 	this->PerformLayout();
-
 }
 
+/*
 #include <iostream>
 using namespace std;
+*/
 
 //************************************************************
 //		DRAG & DROP EVENTS
 //************************************************************
-// C_Main
+
+	//-------------------------------------------------
+	//		C_Main
+	//-------------------------------------------------
 System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
 	this->C_Main_listBox->Items->Clear();
@@ -387,7 +402,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ send
 			this->fileNameMain = new std::string(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
-	if (this->check_ext_C_Hide != -1 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0)
+	if (this->check_ext_C_Hide > 0 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0)
 		this->C_button_Process->Enabled = true;
 
 	std::string strR = to_string(sptr->GetImageRows(this->fileNameMain));
@@ -404,7 +419,9 @@ System::Void WindowCoding::listBox1_DragEnter_C_listBox_Main(System::Object^ sen
 	}
 }
 
-// C_Hide
+	//-------------------------------------------------
+	//		C_Hide
+	//-------------------------------------------------
 System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
 	this->C_Hide_listBox->Items->Clear();
@@ -420,7 +437,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ send
 			this->fileNameHide = new std::string(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
-	if (this->check_ext_C_Main != -1 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0) {
+	if (this->check_ext_C_Main > 0 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0) {
 		this->C_button_Process->Enabled = true;
 	}
 	else
@@ -436,74 +453,6 @@ System::Void WindowCoding::listBox1_DragEnter_C_listBox_Hide(System::Object^ sen
 {
 	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true) {
 		e->Effect = DragDropEffects::All;
-	}
-}
-// D
-System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
-{
-	this->D_listBox->Items->Clear();
-	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
-	for each (String ^ file in files) {
-		if (files->Length == 1) {
-			std::string s_file = msclr::interop::marshal_as<std::string>(file);
-			this->check_ext_D = checkFile(s_file);
-
-			String^ filename = Path::GetFileName(file);
-			this->D_listBox->Items->Add(filename);
-
-			this->fileNameDecoding = new std::string(msclr::interop::marshal_as<std::string>(filename));
-		}
-	}
-	if (this->check_ext_D != -1) {
-		this->D_button_Process->Enabled = true;
-	}
-	else
-		this->C_button_Process->Enabled = false;
-
-	std::string strR = to_string(sptr->GetImageRows(this->fileNameDecoding));
-	std::string strC = to_string(sptr->GetImageCols(this->fileNameDecoding));
-	String^ rows = gcnew String(strR.c_str());
-	String^ cols = gcnew String(strC.c_str());
-	this->D_label_Widthpx->Text = rows + L" px";
-	this->D_label_Heightpx->Text = cols + L" px";
-}
-System::Void WindowCoding::listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
-{
-	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true) {
-		e->Effect = DragDropEffects::All;
-	}
-}
-
-
-System::Void WindowCoding::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
-{
-}
-
-int WindowCoding::checkFile(std::string path)
-{
-	std::fstream file;
-	std::string extension;
-	for (size_t i = path.size() - 1; i >= path.size() - 3; i--)
-	{
-		extension += path[i];
-	}
-	file.open(path, std::ios::in);
-	if (file.good() == false)
-	{
-		file.close();
-		return -1;
-	}
-	else if (extension == "gpj" || extension == "gnp" || extension == "pmb")
-	{
-		extension.clear();
-		file.close();
-		return 1;
-	}
-	else
-	{
-		extension.clear();
-		file.close();
-		return 0;
 	}
 }
 
@@ -532,8 +481,61 @@ System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System
 		MessageBox::Show("unable to load images", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 }
+
+	//-------------------------------------------------
+	//		D
+	//-------------------------------------------------
+System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+{
+	this->D_listBox->Items->Clear();
+	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
+	for each (String ^ file in files) {
+		if (files->Length == 1) {
+			std::string s_file = msclr::interop::marshal_as<std::string>(file);
+			this->check_ext_D = checkFile(s_file);
+
+			String^ filename = Path::GetFileName(file);
+			this->D_listBox->Items->Add(filename);
+
+			this->fileNameDecoding = new std::string(msclr::interop::marshal_as<std::string>(filename));
+		}
+	}
+	if (this->check_ext_D > 0) {
+		this->D_button_Process->Enabled = true;
+	}
+	else
+		this->D_button_Process->Enabled = false;
+
+	if (this->D_options_checkBox->Enabled == false && (*extensionDecoding == "gpj." || *extensionDecoding == "gepj") )
+		this->D_options_checkBox->Enabled = true;
+	else
+		this->D_options_checkBox->Enabled = false;
+
+	std::string strR = to_string(sptr->GetImageRows(this->fileNameDecoding));
+	std::string strC = to_string(sptr->GetImageCols(this->fileNameDecoding));
+	String^ rows = gcnew String(strR.c_str());
+	String^ cols = gcnew String(strC.c_str());
+	this->D_label_Widthpx->Text = rows + L" px";
+	this->D_label_Heightpx->Text = cols + L" px";
+}
+System::Void WindowCoding::listBox1_DragEnter_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
+{
+	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true) {
+		e->Effect = DragDropEffects::All;
+	}
+}
+
+System::Void WindowCoding::D_options_checkedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	if (this->D_options_checkBox->Checked == true)
+		this->Denoising = true;
+	else
+		this->Denoising = false;
+}
+
 System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
+	System::Windows::Forms::Cursor::Current = System::Windows::Forms::Cursors::WaitCursor;
 	try {
 		if (this->check_ext_D == -1)
 			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
@@ -547,7 +549,7 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 			int k = strtol(t1.c_str(), NULL, 10);
 			int f = D_options_comboBox_format->SelectedIndex;
 
-			sptr->Decoding((this->fileNameDecoding), k, f);
+			sptr->Decoding((this->fileNameDecoding), k, f, this->Denoising);
 			MessageBox::Show("output_decoding.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 	}
@@ -555,8 +557,46 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 	{
 		MessageBox::Show("unable to load image", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
-
+	System::Windows::Forms::Cursor::Current = System::Windows::Forms::Cursors::Default;
 }
+
+	//-------------------------------------------------
+	//		OTHER
+	//-------------------------------------------------
+int WindowCoding::checkFile(std::string path)
+{
+	std::fstream file;
+	std::string extension;
+	for (size_t i = path.size() - 1; i >= path.size() - 4; i--)
+	{
+		extension += path[i];
+	}
+	this->extensionDecoding = new std::string(extension);
+	file.open(path, std::ios::in);
+	if (file.good() == false)
+	{
+		file.close();
+		return -1;
+	}
+	else if (extension == "gpj." || extension == "gnp." || extension == "pmb." || extension == "gepj")
+	{
+		extension.clear();
+		file.close();
+		return 1;
+	}
+	else
+	{
+		extension.clear();
+		file.close();
+		return 0;
+	}
+}
+
+System::Void WindowCoding::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
+{
+}
+
 /*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	this->comboBox1->SelectedIndex = 0;
 */

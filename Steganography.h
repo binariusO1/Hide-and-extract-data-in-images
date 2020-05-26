@@ -6,6 +6,7 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
+#include <opencv2/photo.hpp>				//for fastNlMeansDenoising (using with release mode (faster))
 #include <fstream>							//to save file
 
 using namespace std;
@@ -22,12 +23,12 @@ public:
 	//b - steganography last significants bits, f - output format
 	bool Coding(const std::string* nameMain, const std::string* nameHide, int b, int f);
 	//b - steganography last significants bits, f - output format
-	bool Decoding(const std::string * nameDecoding, int b, int f);
+	bool Decoding(const std::string * nameDecoding, int b, int f, bool d);
 	bool CompareSizeOut(const std::string* nameMain, const std::string* nameHide);
 	int GetImageRows(const std::string* image);
 	int GetImageCols(const std::string* image);
 
-	//void ste
+	
 private:
 	std::string imageNameMain;
 	std::string imageNameHide;
@@ -44,10 +45,12 @@ private:
 	int cutRGB( int value1);
 	int cutRGB( int value1, int value2);
 	void ReadChanels(cv::Mat& temp, const cv::Mat& decoding);
+	void Denoising(cv::Mat& image);
 
 	void SaveFile(cv::Mat& image);
 	void SaveFileDecoding(const cv::Mat& image);
 
 	int bit;
 	int format;
+	bool denoising;
 };

@@ -45,6 +45,7 @@ bool Steganography::Coding( const std::string * nameMain, const std::string*name
 	this->bit = 4;
 	color[0] = cutRGB(static_cast<int>(colorMain2[0]), (t << 4));
 	this->bit = t;
+
 	//^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^
 	cout << "point (0,0): " << static_cast<int>(color[0]) << endl;
 	//v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v
@@ -52,7 +53,7 @@ bool Steganography::Coding( const std::string * nameMain, const std::string*name
 	SaveFile(*temp);
 	return 1;
 }
-bool Steganography::Decoding(const std::string * nameDecoding, int b = 4, int f = 0)
+bool Steganography::Decoding(const std::string * nameDecoding, int b = 4, int f = 0, bool d = false)
 {
 	//^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^
 	cout << "decoding" << endl;
@@ -60,6 +61,7 @@ bool Steganography::Decoding(const std::string * nameDecoding, int b = 4, int f 
 
 	this->bit = b;
 	this->format = f;
+	this->denoising = d;
 
 	cv::String SnameDecoding(*nameDecoding);
 	imageDecoding = cv::imread(cv::samples::findFile(SnameDecoding), cv::IMREAD_COLOR);
@@ -80,6 +82,9 @@ bool Steganography::Decoding(const std::string * nameDecoding, int b = 4, int f 
 	cv::Vec3b color0 = temp->at<cv::Vec3b>(0, 0);
 	cout << "(0,0)temp:" << static_cast<int>(color0[0]) << endl;
 	//v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v
+
+	if (this->denoising == true)
+		Denoising(*temp);
 
 	SaveFileDecoding(*temp);
 	return 1;
@@ -272,6 +277,19 @@ void Steganography::ReadChanels(cv::Mat& temp, const cv::Mat& decoding)
 		}
 	}
 }
+void Steganography::Denoising(cv::Mat& image)
+{
+	//^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^
+	cout << "start denoising..." << endl;
+	//v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v
+
+	medianBlur(image, image, 3);
+	fastNlMeansDenoising(image, image, 25.0, 7, 21);
+
+	//^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^
+	cout << "...denoising end" << endl;
+	//v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v-v
+}
 void Steganography::SaveFile(cv::Mat& image)
 {
 	std::vector<int> compression_params;
@@ -315,9 +333,7 @@ int Steganography::GetImageCols(const std::string* image)
 }
 
 //-------------------------------------------------------------------------------------------------
-//remainings
-
-
+	//remainings
 	//cv::Mat temp(imageMain);
 	/*
 	cv::Vec3b& colorMain = imageMain.at<cv::Vec3b>(0, 0);

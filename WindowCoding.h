@@ -25,6 +25,7 @@ namespace Hideandextractdatainimages
 				this->check_ext_C_Hide = -1;
 				this->check_ext_D = -1;
 				this->check_size = false;
+				this->Denoising = false;
 				sptr = &obj;
 			}
 		protected:
@@ -87,6 +88,7 @@ namespace Hideandextractdatainimages
 	private: System::Windows::Forms::Label^ D_options_label_bits;
 	private: System::Windows::Forms::Label^ D_label_Heightpx;
 	private: System::Windows::Forms::Label^ D_label_Widthpx;
+	private: System::Windows::Forms::CheckBox^ D_options_checkBox;
 	private: System::Windows::Forms::ListBox^ D_listBox;
 
 #pragma region Windows Form Designer generated code
@@ -106,6 +108,7 @@ namespace Hideandextractdatainimages
 		System::Void C_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void D_button_Process_Start(System::Object^ sender, System::EventArgs^ e);
 		System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
+		System::Void D_options_checkedChanged(System::Object^ sender, System::EventArgs^ e);
 
 		int checkFile(std::string path);
 
@@ -117,11 +120,15 @@ namespace Hideandextractdatainimages
 		int check_ext_C_Hide;
 		int check_ext_D;
 		bool check_size;
+		bool Denoising;
 		Steganography* sptr;
 		std::string* fileNameMain;
 		std::string* fileNameHide;
 		std::string* fileNameDecoding;
+		std::string* extensionDecoding;
 
 #pragma endregion
-	};
+
+
+};
 }

@@ -3,6 +3,9 @@
 <p></p>
 <img src="https://img.shields.io/badge/C++-17 | opencv-blue" title="hover text">
 <p></p>
+hr.new1 {
+  border-top: 1px solid black;
+}
 <h3>About</h3>
 The program allows you to hide an image in another image.
 <p><a href="https://en.wikipedia.org/wiki/Steganography">Steganography on wiki</a></p>

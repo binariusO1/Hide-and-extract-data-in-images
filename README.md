@@ -1,14 +1,14 @@
-<h2>070 - Hide and extract data in images</h2>
+<h1>070 - Hide and extract data in images</h1>
 <b>(Steganography)</b>
 <p></p>
 <img src="https://img.shields.io/badge/C++-17 | opencv-blue" title="hover text">
 <p></p>
-<hr</hr>
-<h3>About</h3>
+
+<h2>About</h2>
 The program allows you to hide an image in another image.
 <p><a href="https://en.wikipedia.org/wiki/Steganography">Steganography on wiki</a></p>
 
-<h3>Options</h3>
+<h2>Options</h2>
 <b>Coding</b>
 
 
@@ -40,6 +40,6 @@ https://i.imgur.com/gx51Yo4.png
 https://i.imgur.com/uRflgzs.png
 https://i.imgur.com/CEMzQAf.png
 https://i.imgur.com/IEwRTuk.png
-<h3>License</h3>
+<h2>License</h2>
 OpenCV:
 <p><a href="https://opencv.org/license/">https://opencv.org/license/</a></p>

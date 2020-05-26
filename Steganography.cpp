@@ -2,34 +2,22 @@
 
 bool Steganography::Coding( const std::string * nameMain, const std::string*nameHide, int b=4, int f=0)
 {
+	//-----------------------------------------------------------------
+	cout << "coding" << endl;
+	//-----------------------------------------------------------------
+
 	this->bit = b;
 	this->format = f;
-	cout << "coding" << endl;
-	//cout << *nameMain << endl;
-	//cout << *nameHide << endl;
 
 	cv::String SnameMain(*nameMain);
 	cv::String SnameHide(*nameHide);
 
-	//cout << "coding." << endl;
 	imageMain = cv::imread(cv::samples::findFile(SnameMain), cv::IMREAD_COLOR);
 	imageHide = cv::imread(cv::samples::findFile(SnameHide), cv::IMREAD_COLOR);
 
-	cv::Vec3b colorMain = imageMain.at<cv::Vec3b>(0, 0);
-	cout << static_cast<int>(colorMain[0]) << endl;
-
-	//cout << nameMain << " " << nameHide << endl;
-
-	//cout << "coding.." << endl;
-
-	//some exception
 	if (!CheckIfEmpty(imageMain, imageHide))
 		return 0;
 
-	//cout << "coding..." << endl;
-	//cout << "ImageMain width: " << imageMain.cols << " "  << "ImageMain height: " << imageMain.rows << endl;
-	//cout << "imageHide width: " << imageHide.cols << " "  << "imageHide height: " << imageHide.rows << endl;
-	
 	if (!CompareSize(imageMain, imageHide))
 		return 0;
 
@@ -38,22 +26,48 @@ bool Steganography::Coding( const std::string * nameMain, const std::string*name
 	*temp = imageMain.clone();
 
 	MixChanels(*temp,imageMain, imageHide);
-	SaveFile(imageMain);
+
+	//quality info
+	//-----------------------------------------------------------------
+	cv::Vec3b colorMain = temp->at<cv::Vec3b>(1, 1);
+	cout << "(1,1)temp:" << static_cast<int>(colorMain[0]) << endl;
+	cv::Vec3b ch2 = imageMain.at<cv::Vec3b>(1, 1);
+	cout << "(1,1)main:" << static_cast<int>(ch2[0]) << endl;
+	cv::Vec3b ch = imageHide.at<cv::Vec3b>(1, 1);
+	cout << "(1,1)hide:" << static_cast<int>(ch[0]) << endl;
+	//-----------------------------------------------------------------
+
+	SaveFile(*temp);
 	return 1;
 }
 bool Steganography::Decoding(const std::string * nameDecoding, int b = 4, int f = 0)
 {
+	//-----------------------------------------------------------------
+	cout << "decoding" << endl;
+	//-----------------------------------------------------------------
+
 	this->bit = b;
 	this->format = f;
-	cout << "decoding" << endl;
+
 	cv::String SnameDecoding(*nameDecoding);
 	imageDecoding = cv::imread(cv::samples::findFile(SnameDecoding), cv::IMREAD_COLOR);
+
 	if (!CheckIfEmpty(imageDecoding))
 		return 0;
 
-	cv::Mat* temp = new cv::Mat(imageDecoding);
-	ReadChanels(*temp,imageDecoding);
-	SaveFileDecoding(imageDecoding);
+	cv::Mat* temp = new cv::Mat;
+	*temp = imageDecoding.clone();
+	ReadChanels(*temp, imageDecoding);
+
+	//quality info
+	//-----------------------------------------------------------------
+	cv::Vec3b colorMain = temp->at<cv::Vec3b>(1, 1);
+	cout << "(1,1)temp:" << static_cast<int>(colorMain[0]) << endl;
+	cv::Vec3b ch2 = imageDecoding.at<cv::Vec3b>(1, 1);
+	cout << "(1,1)decod:" << static_cast<int>(ch2[0]) << endl;
+	//-----------------------------------------------------------------
+
+	SaveFileDecoding(*temp);
 	return 1;
 }
 bool Steganography::CheckIfEmpty(const cv::Mat& image)
@@ -101,9 +115,6 @@ bool Steganography::CompareSizeOut(const std::string* nameMain, const std::strin
 }
 void Steganography::MixChanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat& hide)
 {
-	cv::Vec3b colorM = main.at<cv::Vec3b>(0, 0);
-	cout << static_cast<int>(colorM[0]) << endl;
-
 	int temp_rows = hide.rows;
 	int temp_cols = hide.cols;
 
@@ -111,7 +122,7 @@ void Steganography::MixChanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat
 	{
 		for (int j = 0; j < static_cast<int>(temp_cols); j++)	//x
 		{
-			cv::Vec3b color = temp.at<cv::Vec3b>(i, j);
+			cv::Vec3b &color = temp.at<cv::Vec3b>(i, j);
 			cv::Vec3b colorMain = main.at<cv::Vec3b>(i, j);
 			cv::Vec3b colorHide = hide.at<cv::Vec3b>(i, j);
 			color[0] = cutRGB(static_cast<int>(colorMain[0]) , static_cast<int>(colorHide[0]));
@@ -119,17 +130,15 @@ void Steganography::MixChanels(cv::Mat& temp, const cv::Mat& main, const cv::Mat
 			color[2] = cutRGB(static_cast<int>(colorMain[2]) , static_cast<int>(colorHide[2]));
 		}
 	}
-	cv::Vec3b colorMain3 = main.at<cv::Vec3b>(0, 0);
-	cout << static_cast<int>(colorMain3[0]) << endl;
 	//first bits of blue give us an information about last significations bits
 	//(facilitation to decoding)
 	cv::Vec3b& color = temp.at<cv::Vec3b>(0, 0);
 	cv::Vec3b colorMain2 = main.at<cv::Vec3b>(0, 0);
 	color[0] = cutRGB(static_cast<int>(colorMain2[0]), this->bit);
 
-	cout << static_cast<int>(colorMain2[0]) << endl;
-	cout << this->bit << endl;
-	cout << static_cast<int>(color[0]) << endl;
+	//-----------------------------------------------------------------
+	cout << "point (0,0): " << static_cast<int>(color[0]) << endl;
+	//-----------------------------------------------------------------
 }
 int Steganography::cutRGB(int value1, int value2)
 {
@@ -149,7 +158,7 @@ int Steganography::cutRGB(int value1, int value2)
 		num2[i] = t2 % 2;
 		t2 = t2 / 2;
 	}
-	for (i = 0; i < this->bit; i++,j=j*2){
+	for (i = 8 - this->bit; i < 8; i++,j=j*2){
 		rval += num2[i] * j;
 	}
 	for (i = (this->bit); i < 8; i++, j = j * 2){
@@ -158,34 +167,27 @@ int Steganography::cutRGB(int value1, int value2)
 	return rval;
 	/*
 	explanation:
-`	t1 = 224;
-	t2 = 4;
+ 	t1 = 231;
+	t2 = 193;
 	--
 	num1[]:
 	7	6	5	4	3	2	1	0
-	1	1	1	0	0	0	0	0
+	1	1	1	0	0	1	1	1
 	num2[]:
 	7	6	5	4	3	2	1	0
-	0	0	0	0	0	1	0	0
+	1	1	0	0	0	0	0	1
 	---
 	(1)
 	7	6	5	4	3	2	1	0
-
+	124	64	32	16	8	4	2	1
+	0	0	0	0	8	4	0	0	= 12
 	(2)
 	7	6	5	4	3	2	1	0
-
-	*/
-
-	/*
-	for (i = (8-this->bit); i < 8; i++,j=j*2){
-	rval += num2[i] * j;
-	}
-	for (i = (this->bit); i < 8; i++, j = j * 2){
-		rval += num1[i] * j;
-	}
+	124	64	32	16	8	4	2	1
+	124	64	32	0	0	4	0	0	= 224 + 12 = 236
 	*/
 }
-int Steganography::cutRGB( int value1)
+int Steganography::cutRGB(int value1)
 {
 	int num1[8]{};
 	int num2[8]{};
@@ -198,42 +200,64 @@ int Steganography::cutRGB( int value1)
 		num1[i] = t1 % 2;
 		t1 = t1 / 2;
 	}
-	for (i = (this->bit); i < 8; i++, j = j * 2) {
+	for (i = 0; i < (8-this->bit); i++, j = j * 2) {
 		rval += 0;
 	}
 	for (i = 0; i < this->bit; i++, j = j * 2) {
 		rval += num1[i] * j;
 	}
 	return rval;
+
+	/*
+	explanation:
+ 	t1 = 228;
+	this->bit = 4;
+	--
+	num1[]:
+	7	6	5	4	3	2	1	0
+	1	1	1	0	0	1	0	0
+	num2[]:
+	7	6	5	4	3	2	1	0
+	.	.	.	.	.	.	.	.	(zeros)
+	---
+	(1)
+	7	6	5	[4]	3	2	1	0
+	124	64	32	16	8	4	2	1
+	.	.	.	.	0	0	0	0	= 0
+	(2)
+	7	6	5	4	3	2	1	0
+	124	64	32	16	8	4	2	1
+	0	64	0	0	0	0	0	0	= 64
+	*/
 }
 void Steganography::ReadChanels(cv::Mat& temp, const cv::Mat& decoding)
 {
 	int temp_rows = decoding.rows;
 	int temp_cols = decoding.cols;
 
-	cv::Vec3b color = decoding.at<cv::Vec3b>(0, 0);
-	int d = static_cast<int>(color.val[0]);
-	cout << d << endl;
 	if (bit == 0) {
 		cv::Vec3b color = decoding.at<cv::Vec3b>(0, 0);
 		int code = static_cast<int>(color.val[0]);
-		int p = 128;
-		while (p>15)
-		{
-			if (code > p) {
-				code = code - p;
-				p = p / 2;
-			}
-			else
-				p = p / 2;
+		cout << code << endl;
+
+		int num1[8]{};
+		unsigned i = 0, j = 1;
+		for (i = 0; i < 8; i++) {
+			num1[i] = code % 2;
+			code = code / 2;
 		}
+		code = 0;
+		for (i = 0; i < 3; i++, j = j * 2) {
+			code += num1[i] * j;
+		}
+		
+		bit = code;
 		cout << bit << endl;
 	}
 
-
-	for (int i = 1; i < static_cast<int>(temp_rows); i++)	//y
+	for (int i = 0; i < static_cast<int>(temp_rows); i++)	//y
 	{
-		for (int j = 1; j < static_cast<int>(temp_cols); j++)	//x
+		for (int j = 0; j < static_cast<int>(temp_cols); j++)	//x
 		{
 			cv::Vec3b& color = temp.at<cv::Vec3b>(i, j);
 			cv::Vec3b colorDecoding = decoding.at<cv::Vec3b>(i, j);
@@ -245,8 +269,12 @@ void Steganography::ReadChanels(cv::Mat& temp, const cv::Mat& decoding)
 }
 void Steganography::SaveFile(const cv::Mat& image)
 {
+	std::vector<int> compression_params;
+	compression_params.push_back(cv::IMWRITE_JPEG_QUALITY);
+	compression_params.push_back(90);
+
 	if (format == 1)
-		cv::imwrite("output.png", image);
+		cv::imwrite("output.png", image, compression_params);
 	else if(format == 2)
 		cv::imwrite("output.bmp", image);
 	else
@@ -280,7 +308,7 @@ int Steganography::GetImageCols(const std::string* image)
 	return temp->cols;
 }
 
-
+//-------------------------------------------------------------------------------------------------
 //remainings
 
 

@@ -103,7 +103,7 @@ void WindowCoding::InitializeComponent(void)
 			resources->GetString(L"C_Options_ComboBox_format.Items1"), resources->GetString(L"C_Options_ComboBox_format.Items2")
 	});
 	resources->ApplyResources(this->C_Options_ComboBox_format, L"C_Options_ComboBox_format");
-	this->C_Options_ComboBox_format->Name = L"C_Options_ComboBox_format";
+	this->C_Options_ComboBox_format->SelectedIndex = 0;
 	// 
 	// C_Options_label_format
 	// 
@@ -126,7 +126,7 @@ void WindowCoding::InitializeComponent(void)
 			resources->GetString(L"C_Options_ComboBox_bits.Items1"), resources->GetString(L"C_Options_ComboBox_bits.Items2")
 	});
 	resources->ApplyResources(this->C_Options_ComboBox_bits, L"C_Options_ComboBox_bits");
-	this->C_Options_ComboBox_bits->Name = L"C_Options_ComboBox_bits";
+	this->C_Options_ComboBox_bits->SelectedIndex = 0;
 	// 
 	// C_Options_label_note
 	// 
@@ -259,7 +259,7 @@ void WindowCoding::InitializeComponent(void)
 			resources->GetString(L"D_options_comboBox_format.Items1"), resources->GetString(L"D_options_comboBox_format.Items2")
 	});
 	resources->ApplyResources(this->D_options_comboBox_format, L"D_options_comboBox_format");
-	this->D_options_comboBox_format->Name = L"D_options_comboBox_format";
+	this->D_options_comboBox_format->SelectedIndex = 0;
 	// 
 	// D_options_label_format
 	// 
@@ -270,12 +270,12 @@ void WindowCoding::InitializeComponent(void)
 	// 
 	this->D_options_comboBox_bits->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
 	this->D_options_comboBox_bits->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-	this->D_options_comboBox_bits->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+	this->D_options_comboBox_bits->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
 		resources->GetString(L"D_options_comboBox_bits.Items"),
-			resources->GetString(L"D_options_comboBox_bits.Items1"), resources->GetString(L"D_options_comboBox_bits.Items2")
+			resources->GetString(L"D_options_comboBox_bits.Items1"), resources->GetString(L"D_options_comboBox_bits.Items2"), resources->GetString(L"D_options_comboBox_bits.Items3")
 	});
 	resources->ApplyResources(this->D_options_comboBox_bits, L"D_options_comboBox_bits");
-	this->D_options_comboBox_bits->Name = L"D_options_comboBox_bits";
+	this->D_options_comboBox_bits->SelectedIndex = 0;
 	// 
 	// D_options_label_note
 	// 
@@ -536,9 +536,11 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 	else {
 		String^ temp1 = D_options_comboBox_bits->Text;
 		std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
+		if (t1 == "auto")
+			t1 = "0";
 		int k = strtol(t1.c_str(), NULL, 10);
 		int f = D_options_comboBox_format->SelectedIndex;
-		cout << k << endl;
+
 		sptr->Decoding((this->fileNameDecoding) ,k,f);
 		MessageBox::Show("output_decoding.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 	}

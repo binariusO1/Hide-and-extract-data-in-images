@@ -117,6 +117,511 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;C_Options_GroupBox.Name" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_groupBox.Name" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_groupBox.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_groupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;C_Main_groupBox.Name" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Main_groupBox.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;C_Main_groupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 316</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Coding</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="D_button_Process.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="D_button_Process.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 69</value>
+  </data>
+  <data name="D_button_Process.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="D_button_Process.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="D_button_Process.Text" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="&gt;&gt;D_button_Process.Name" xml:space="preserve">
+    <value>D_button_Process</value>
+  </data>
+  <data name="&gt;&gt;D_button_Process.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_button_Process.Parent" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_button_Process.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="D_options_comboBox_format.Items" xml:space="preserve">
+    <value>jpg</value>
+  </data>
+  <data name="D_options_comboBox_format.Items1" xml:space="preserve">
+    <value>png</value>
+  </data>
+  <data name="D_options_comboBox_format.Items2" xml:space="preserve">
+    <value>bmp</value>
+  </data>
+  <data name="D_options_comboBox_format.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 18</value>
+  </data>
+  <data name="D_options_comboBox_format.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 21</value>
+  </data>
+  <data name="D_options_comboBox_format.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_format.Name" xml:space="preserve">
+    <value>D_options_comboBox_format</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_format.Parent" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_format.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="D_options_label_format.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="D_options_label_format.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="D_options_label_format.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 21</value>
+  </data>
+  <data name="D_options_label_format.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="D_options_label_format.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="D_options_label_format.Text" xml:space="preserve">
+    <value>Output format:</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_format.Name" xml:space="preserve">
+    <value>D_options_label_format</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_format.Parent" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_format.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="D_options_comboBox_bits.Items" xml:space="preserve">
+    <value>auto</value>
+  </data>
+  <data name="D_options_comboBox_bits.Items1" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="D_options_comboBox_bits.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="D_options_comboBox_bits.Items3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="D_options_comboBox_bits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 18</value>
+  </data>
+  <data name="D_options_comboBox_bits.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 21</value>
+  </data>
+  <data name="D_options_comboBox_bits.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_bits.Name" xml:space="preserve">
+    <value>D_options_comboBox_bits</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_bits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_bits.Parent" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_options_comboBox_bits.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="D_options_label_note.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="D_options_label_note.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="D_options_label_note.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 42</value>
+  </data>
+  <data name="D_options_label_note.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="D_options_label_note.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="D_options_label_note.Text" xml:space="preserve">
+    <value>Note: If auto option gives not good resultat choose 
+another one</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_note.Name" xml:space="preserve">
+    <value>D_options_label_note</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_note.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_note.Parent" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_note.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="D_options_label_bits.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="D_options_label_bits.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="D_options_label_bits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 21</value>
+  </data>
+  <data name="D_options_label_bits.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="D_options_label_bits.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="D_options_label_bits.Text" xml:space="preserve">
+    <value>Last significant bits:</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_bits.Name" xml:space="preserve">
+    <value>D_options_label_bits</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_bits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_bits.Parent" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_options_label_bits.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="D_options_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 109</value>
+  </data>
+  <data name="D_options_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 98</value>
+  </data>
+  <data name="D_options_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="D_options_groupBox.Text" xml:space="preserve">
+    <value>Decoding options</value>
+  </data>
+  <data name="&gt;&gt;D_options_groupBox.Name" xml:space="preserve">
+    <value>D_options_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_options_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_options_groupBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;D_options_groupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;D_label_Heightpx.Name" xml:space="preserve">
+    <value>D_label_Heightpx</value>
+  </data>
+  <data name="&gt;&gt;D_label_Heightpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_label_Heightpx.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_label_Heightpx.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;D_label_Widthpx.Name" xml:space="preserve">
+    <value>D_label_Widthpx</value>
+  </data>
+  <data name="&gt;&gt;D_label_Widthpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_label_Widthpx.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_label_Widthpx.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.Name" xml:space="preserve">
+    <value>D_label_Height</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_label_Height.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.Name" xml:space="preserve">
+    <value>D_label_Width</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_label_Width.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.Name" xml:space="preserve">
+    <value>D_listBox</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.Parent" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_listBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="D_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="D_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 90</value>
+  </data>
+  <data name="D_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="D_groupBox.Text" xml:space="preserve">
+    <value>Image to decode</value>
+  </data>
+  <data name="&gt;&gt;D_groupBox.Name" xml:space="preserve">
+    <value>D_groupBox</value>
+  </data>
+  <data name="&gt;&gt;D_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D_groupBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;D_groupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 316</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Decoding</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="tabControl1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 342</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_format.Name" xml:space="preserve">
+    <value>C_Options_ComboBox_format</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_format.Parent" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_format.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_format.Name" xml:space="preserve">
+    <value>C_Options_label_format</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_format.Parent" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_format.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;C_button_Process.Name" xml:space="preserve">
+    <value>C_button_Process</value>
+  </data>
+  <data name="&gt;&gt;C_button_Process.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_button_Process.Parent" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_button_Process.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_bits.Name" xml:space="preserve">
+    <value>C_Options_ComboBox_bits</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_bits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_bits.Parent" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_ComboBox_bits.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_note.Name" xml:space="preserve">
+    <value>C_Options_label_note</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_note.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_note.Parent" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_note.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_bits.Name" xml:space="preserve">
+    <value>C_Options_label_bits</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_bits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_bits.Parent" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_label_bits.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="C_Options_GroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 212</value>
+  </data>
+  <data name="C_Options_GroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 98</value>
+  </data>
+  <data name="C_Options_GroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="C_Options_GroupBox.Text" xml:space="preserve">
+    <value>Output image options</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.Name" xml:space="preserve">
+    <value>C_Options_GroupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;C_Options_GroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="C_Options_ComboBox_format.Items" xml:space="preserve">
     <value>jpg</value>
   </data>
@@ -126,14 +631,12 @@
   <data name="C_Options_ComboBox_format.Items2" xml:space="preserve">
     <value>bmp</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="C_Options_ComboBox_format.Location" type="System.Drawing.Point, System.Drawing">
     <value>244, 18</value>
   </data>
   <data name="C_Options_ComboBox_format.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="C_Options_ComboBox_format.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
@@ -152,7 +655,6 @@
   <data name="C_Options_label_format.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="C_Options_label_format.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -298,29 +800,89 @@ image to hide</value>
   <data name="&gt;&gt;C_Options_label_bits.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="C_Options_GroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 212</value>
+  <data name="&gt;&gt;C_Hide_label_Heightpx.Name" xml:space="preserve">
+    <value>C_Hide_label_Heightpx</value>
   </data>
-  <data name="C_Options_GroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 98</value>
+  <data name="&gt;&gt;C_Hide_label_Heightpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="C_Options_GroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;C_Hide_label_Heightpx.Parent" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
   </data>
-  <data name="C_Options_GroupBox.Text" xml:space="preserve">
-    <value>Output image options</value>
+  <data name="&gt;&gt;C_Hide_label_Heightpx.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;C_Options_GroupBox.Name" xml:space="preserve">
-    <value>C_Options_GroupBox</value>
+  <data name="&gt;&gt;C_Hide_label_Widthpx.Name" xml:space="preserve">
+    <value>C_Hide_label_Widthpx</value>
   </data>
-  <data name="&gt;&gt;C_Options_GroupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;C_Hide_label_Widthpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Widthpx.Parent" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Widthpx.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Height.Name" xml:space="preserve">
+    <value>C_Hide_label_Height</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Height.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Height.Parent" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Height.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Width.Name" xml:space="preserve">
+    <value>C_Hide_label_Width</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Width.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Width.Parent" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_label_Width.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_listBox.Name" xml:space="preserve">
+    <value>C_Hide_listBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_listBox.Parent" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_listBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="C_Hide_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
+  <data name="C_Hide_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 95</value>
+  </data>
+  <data name="C_Hide_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="C_Hide_groupBox.Text" xml:space="preserve">
+    <value>Image to hide</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_groupBox.Name" xml:space="preserve">
+    <value>C_Hide_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Hide_groupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;C_Options_GroupBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;C_Hide_groupBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;C_Options_GroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;C_Hide_groupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="C_Hide_label_Heightpx.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -442,6 +1004,9 @@ image to hide</value>
   <data name="&gt;&gt;C_Hide_label_Width.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
   <data name="C_Hide_listBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 19</value>
   </data>
@@ -451,9 +1016,6 @@ image to hide</value>
   <data name="C_Hide_listBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
   <data name="C_Hide_listBox.ToolTip" xml:space="preserve">
     <value>Drop image</value>
   </data>
@@ -469,29 +1031,89 @@ image to hide</value>
   <data name="&gt;&gt;C_Hide_listBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="C_Hide_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 111</value>
+  <data name="&gt;&gt;C_Main_label_Heightpx.Name" xml:space="preserve">
+    <value>C_Main_label_Heightpx</value>
   </data>
-  <data name="C_Hide_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 95</value>
+  <data name="&gt;&gt;C_Main_label_Heightpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="C_Hide_groupBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;C_Main_label_Heightpx.Parent" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Heightpx.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Widthpx.Name" xml:space="preserve">
+    <value>C_Main_label_Widthpx</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Widthpx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Widthpx.Parent" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Widthpx.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Height.Name" xml:space="preserve">
+    <value>C_Main_label_Height</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Height.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Height.Parent" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Height.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Width.Name" xml:space="preserve">
+    <value>C_Main_label_Width</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Width.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Width.Parent" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_label_Width.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="C_Hide_groupBox.Text" xml:space="preserve">
-    <value>Image to hide</value>
+  <data name="&gt;&gt;C_Main_listBox.Name" xml:space="preserve">
+    <value>C_Main_listBox</value>
   </data>
-  <data name="&gt;&gt;C_Hide_groupBox.Name" xml:space="preserve">
-    <value>C_Hide_groupBox</value>
+  <data name="&gt;&gt;C_Main_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;C_Hide_groupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;C_Main_listBox.Parent" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_listBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="C_Main_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 15</value>
+  </data>
+  <data name="C_Main_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 90</value>
+  </data>
+  <data name="C_Main_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="C_Main_groupBox.Text" xml:space="preserve">
+    <value>Main image</value>
+  </data>
+  <data name="&gt;&gt;C_Main_groupBox.Name" xml:space="preserve">
+    <value>C_Main_groupBox</value>
+  </data>
+  <data name="&gt;&gt;C_Main_groupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;C_Hide_groupBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;C_Main_groupBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;C_Hide_groupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;C_Main_groupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="C_Main_label_Heightpx.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -607,6 +1229,9 @@ image to hide</value>
   <data name="&gt;&gt;C_Main_label_Width.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="C_Main_listBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 19</value>
   </data>
@@ -616,9 +1241,6 @@ image to hide</value>
   <data name="C_Main_listBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="C_Main_listBox.ToolTip" xml:space="preserve">
     <value>Drop image</value>
   </data>
@@ -633,259 +1255,6 @@ image to hide</value>
   </data>
   <data name="&gt;&gt;C_Main_listBox.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="C_Main_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 15</value>
-  </data>
-  <data name="C_Main_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 90</value>
-  </data>
-  <data name="C_Main_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="C_Main_groupBox.Text" xml:space="preserve">
-    <value>Main image</value>
-  </data>
-  <data name="&gt;&gt;C_Main_groupBox.Name" xml:space="preserve">
-    <value>C_Main_groupBox</value>
-  </data>
-  <data name="&gt;&gt;C_Main_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;C_Main_groupBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;C_Main_groupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 316</value>
-  </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Coding</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="D_button_Process.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="D_button_Process.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 69</value>
-  </data>
-  <data name="D_button_Process.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="D_button_Process.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="D_button_Process.Text" xml:space="preserve">
-    <value>Process</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.Name" xml:space="preserve">
-    <value>D_button_Process</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.Parent" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_button_Process.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="D_options_comboBox_format.Items" xml:space="preserve">
-    <value>jpg</value>
-  </data>
-  <data name="D_options_comboBox_format.Items1" xml:space="preserve">
-    <value>png</value>
-  </data>
-  <data name="D_options_comboBox_format.Items2" xml:space="preserve">
-    <value>bmp</value>
-  </data>
-  <data name="D_options_comboBox_format.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 18</value>
-  </data>
-  <data name="D_options_comboBox_format.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 21</value>
-  </data>
-  <data name="D_options_comboBox_format.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_format.Name" xml:space="preserve">
-    <value>D_options_comboBox_format</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_format.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_format.Parent" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_format.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="D_options_label_format.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="D_options_label_format.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="D_options_label_format.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 21</value>
-  </data>
-  <data name="D_options_label_format.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="D_options_label_format.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="D_options_label_format.Text" xml:space="preserve">
-    <value>Output format:</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_format.Name" xml:space="preserve">
-    <value>D_options_label_format</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_format.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_format.Parent" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_format.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="D_options_comboBox_bits.Items" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="D_options_comboBox_bits.Items1" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="D_options_comboBox_bits.Items2" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="D_options_comboBox_bits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 18</value>
-  </data>
-  <data name="D_options_comboBox_bits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 21</value>
-  </data>
-  <data name="D_options_comboBox_bits.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_bits.Name" xml:space="preserve">
-    <value>D_options_comboBox_bits</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_bits.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_bits.Parent" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_options_comboBox_bits.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="D_options_label_note.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="D_options_label_note.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="D_options_label_note.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 42</value>
-  </data>
-  <data name="D_options_label_note.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 26</value>
-  </data>
-  <data name="D_options_label_note.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="D_options_label_note.Text" xml:space="preserve">
-    <value>Note: Change Last significant bits only in case when 
-your image comes from different program</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_note.Name" xml:space="preserve">
-    <value>D_options_label_note</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_note.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_note.Parent" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_note.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="D_options_label_bits.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="D_options_label_bits.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="D_options_label_bits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 21</value>
-  </data>
-  <data name="D_options_label_bits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
-  </data>
-  <data name="D_options_label_bits.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="D_options_label_bits.Text" xml:space="preserve">
-    <value>Last significant bits:</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_bits.Name" xml:space="preserve">
-    <value>D_options_label_bits</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_bits.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_bits.Parent" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_options_label_bits.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="D_options_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 109</value>
-  </data>
-  <data name="D_options_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 98</value>
-  </data>
-  <data name="D_options_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="D_options_groupBox.Text" xml:space="preserve">
-    <value>Decoding options</value>
-  </data>
-  <data name="&gt;&gt;D_options_groupBox.Name" xml:space="preserve">
-    <value>D_options_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_options_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_options_groupBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;D_options_groupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="D_label_Heightpx.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1007,6 +1376,9 @@ your image comes from different program</value>
   <data name="&gt;&gt;D_label_Width.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 17</value>
+  </metadata>
   <data name="D_listBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 19</value>
   </data>
@@ -1016,9 +1388,6 @@ your image comes from different program</value>
   <data name="D_listBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 17</value>
-  </metadata>
   <data name="D_listBox.ToolTip" xml:space="preserve">
     <value>Drop image</value>
   </data>
@@ -1034,84 +1403,15 @@ your image comes from different program</value>
   <data name="&gt;&gt;D_listBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="D_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="D_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 90</value>
-  </data>
-  <data name="D_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="D_groupBox.Text" xml:space="preserve">
-    <value>Image to decode</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.Name" xml:space="preserve">
-    <value>D_groupBox</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;D_groupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 316</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Decoding</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabControl1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="tabControl1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 342</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 17</value>
+  </metadata>
   <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>308, 17</value>
   </metadata>

@@ -11,9 +11,9 @@ The program allows you to hide an image in another image.
 <h2>Options</h2>
 <h3>Coding</h3>
 
-
-<img src="https://i.imgur.com/eils1N7.png" alt="CodingMenu" class="center">
 The best resultat gives .png extension.
+<img src="https://i.imgur.com/eils1N7.png" alt="CodingMenu" class="center">
+
 
 Coding with 4 last significant bits (we can see cat outline) and coding with 3 last significant bits:  
 <img src="https://i.imgur.com/Td6Xth8.png" alt="CodingPNG4bits">      <img src="https://i.imgur.com/aWBNIgI.png" alt="CodingPNG3bits">

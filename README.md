@@ -4,5 +4,10 @@
 <img src="https://img.shields.io/badge/C++-17 | opencv-blue" title="hover text">
 <p></p>
 
-<h3>Coding</h3>
-<h3>Decoding</h3>
+
+
+<b>Coding</b>
+<b>Decoding</b>
+
+<h3>License</h3>
+<a href="https://opencv.org/license/>link text</a>

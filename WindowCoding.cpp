@@ -376,8 +376,8 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ send
 {
 	this->C_Main_listBox->Items->Clear();
 	cli::array<String^>^ files = (cli::array<String^>^)e->Data->GetData(DataFormats::FileDrop, false);
-	for each (String ^ file in files){
-		if (files->Length == 1){
+	for each (String ^ file in files) {
+		if (files->Length == 1) {
 			std::string s_file = msclr::interop::marshal_as<std::string>(file);
 			this->check_ext_C_Main = checkFile(s_file);
 
@@ -387,7 +387,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ send
 			this->fileNameMain = new std::string(msclr::interop::marshal_as<std::string>(filename));
 		}
 	}
-	if(this->check_ext_C_Hide != -1 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0)
+	if (this->check_ext_C_Hide != -1 && (sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) != 0)
 		this->C_button_Process->Enabled = true;
 
 	std::string strR = to_string(sptr->GetImageRows(this->fileNameMain));
@@ -399,7 +399,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Main(System::Object^ send
 }
 System::Void WindowCoding::listBox1_DragEnter_C_listBox_Main(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
-	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true){
+	if (e->Data->GetDataPresent(DataFormats::FileDrop, false) == true) {
 		e->Effect = DragDropEffects::All;
 	}
 }
@@ -425,7 +425,7 @@ System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ send
 	}
 	else
 		this->C_button_Process->Enabled = false;
-	std::string strR= to_string(sptr->GetImageRows(this->fileNameHide));
+	std::string strR = to_string(sptr->GetImageRows(this->fileNameHide));
 	std::string strC = to_string(sptr->GetImageCols(this->fileNameHide));
 	String^ rows = gcnew String(strR.c_str());
 	String^ cols = gcnew String(strC.c_str());
@@ -509,40 +509,51 @@ int WindowCoding::checkFile(std::string path)
 
 System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
-	if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
-		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0)
-		MessageBox::Show("File extension must be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else if ((sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) == 0) {
-		MessageBox::Show("Size of main image must be equal or bigger than image to hide", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	}
-	else {
-		String^ temp1 = C_Options_ComboBox_bits->Text;
-		std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
-		int k = strtol(t1.c_str(), NULL, 10);
-		int f = C_Options_ComboBox_format->SelectedIndex;
+	try {
+		if (this->check_ext_C_Main == -1 || this->check_ext_C_Hide == -1)
+			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		else if (this->check_ext_C_Main == 0 || this->check_ext_C_Hide == 0)
+			MessageBox::Show("File extension must be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		else if ((sptr->CompareSizeOut((this->fileNameMain), (this->fileNameHide))) == 0) {
+			MessageBox::Show("Size of main image must be equal or bigger than image to hide", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		}
+		else {
+			String^ temp1 = C_Options_ComboBox_bits->Text;
+			std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
+			int k = strtol(t1.c_str(), NULL, 10);
+			int f = C_Options_ComboBox_format->SelectedIndex;
 
-		sptr->Coding( (this->fileNameMain), (this->fileNameHide),k,f);
-		MessageBox::Show("output.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+			sptr->Coding((this->fileNameMain), (this->fileNameHide), k, f);
+			MessageBox::Show("output.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
 	}
-
+	catch (...)
+	{
+		MessageBox::Show("unable to load images", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
 }
 System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System::EventArgs^ e)
 {
-	if (this->check_ext_D == -1)
-		MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else if (this->check_ext_D == 0)
-		MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	else {
-		String^ temp1 = D_options_comboBox_bits->Text;
-		std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
-		if (t1 == "auto")
-			t1 = "0";
-		int k = strtol(t1.c_str(), NULL, 10);
-		int f = D_options_comboBox_format->SelectedIndex;
+	try {
+		if (this->check_ext_D == -1)
+			MessageBox::Show("No file", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		else if (this->check_ext_D == 0)
+			MessageBox::Show("File extension should be .jpg, .png or .bmp", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		else {
+			String^ temp1 = D_options_comboBox_bits->Text;
+			std::string t1 = msclr::interop::marshal_as<std::string>(temp1);
+			if (t1 == "auto")
+				t1 = "0";
+			int k = strtol(t1.c_str(), NULL, 10);
+			int f = D_options_comboBox_format->SelectedIndex;
 
-		sptr->Decoding((this->fileNameDecoding) ,k,f);
-		MessageBox::Show("output_decoding.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+			sptr->Decoding((this->fileNameDecoding), k, f);
+			MessageBox::Show("output_decoding.jpg has been created succesfully", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}
+	catch (...)
+	{
+		MessageBox::Show("unable to load image", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 
 }

@@ -45,7 +45,7 @@ private:
 	int cutRGB( int value1, int value2);
 	void ReadChanels(cv::Mat& temp, const cv::Mat& decoding);
 
-	void SaveFile(const cv::Mat& image);
+	void SaveFile(cv::Mat& image);
 	void SaveFileDecoding(const cv::Mat& image);
 
 	int bit;

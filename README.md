@@ -36,7 +36,8 @@ Decoding auto mode  (2 last significant bits):
 <h3>Decoding from .jpg</h3>
 from:
 Decoding with auto mode (4 last significant bits) and decoding wihtout auto mode:
-<img src="https://i.imgur.com/uRflgzs.png" alt="DecodingJPG4bitsAUTO"><img src="https://i.imgur.com/CEMzQAf.png" alt="DecodingJPG4bits">
+<img src="https://i.imgur.com/uRflgzs.png" alt="DecodingJPG4bitsAUTO"> <img src="https://i.imgur.com/CEMzQAf.png" alt="DecodingJPG4bits">
+<p></p>
 Decoding without auto mode (4 last significant bits) + Denoising option:
 <img src="https://i.imgur.com/IEwRTuk.png" alt="DecodingJPG4bitsBlur" class="center">
 

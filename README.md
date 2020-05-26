@@ -13,7 +13,7 @@ The program allows you to hide an image in another image.
 <img src="https://i.imgur.com/heDjKZ2.png" alt="CodingMenu" class="center">
 
 <img src="https://i.imgur.com/Td6Xth8.png" alt="CodingPNG4bits">  <img src="https://i.imgur.com/aWBNIgI.png" alt="CodingPNG3bits">
-<img src="https://i.imgur.com/hJABoe8.png" alt="CodingPNG2bits" class="center">
+<img src="https://i.imgur.com/hJABoe8.png" alt="CodingPNG2bits" class="right">
 
 
 <b>Decoding</b>

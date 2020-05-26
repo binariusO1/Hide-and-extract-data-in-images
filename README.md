@@ -9,7 +9,7 @@ The program allows you to hide an image in another image.
 <p><a href="https://en.wikipedia.org/wiki/Steganography">Steganography on wiki</a></p>
 
 <h2>Options</h2>
-<b>Coding</b>
+<h3>Coding</h3>
 
 
 <img src="https://i.imgur.com/eils1N7.png" alt="CodingMenu" class="center">
@@ -22,7 +22,7 @@ Coding with 2 last significant bits:
 <img src="https://i.imgur.com/hJABoe8.png" alt="CodingPNG2bits" class="right">
 
 
-<b>Decoding</b>
+<h3>Decoding</h3>
 
 
 <img src="https://i.imgur.com/heDjKZ2.png" alt="DecodingMenu" class="center">

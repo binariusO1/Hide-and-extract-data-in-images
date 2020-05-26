@@ -9,5 +9,5 @@
 <b>Coding</b>
 <b>Decoding</b>
 
-<h3>License</h3>
+<h4>License</h4>
 <a href="https://opencv.org/license/></a>

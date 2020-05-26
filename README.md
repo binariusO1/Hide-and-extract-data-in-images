@@ -16,6 +16,7 @@ The best resultat gives .png extension.
 
 Coding with 4 last significant bits (we can see cat outline):     Coding with 3 last significant bits:  
 <img src="https://i.imgur.com/Td6Xth8.png" alt="CodingPNG4bits">  <img src="https://i.imgur.com/aWBNIgI.png" alt="CodingPNG3bits">
+<p></p>
 Coding with 2 last significant bits: 
 <img src="https://i.imgur.com/hJABoe8.png" alt="CodingPNG2bits" class="right">
 

@@ -280,13 +280,13 @@ the best result </value>
     <value>7, 21</value>
   </data>
   <data name="C_Options_label_bits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
+    <value>105, 13</value>
   </data>
   <data name="C_Options_label_bits.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="C_Options_label_bits.Text" xml:space="preserve">
-    <value>Last significant bits:</value>
+    <value>Least significant bits:</value>
   </data>
   <data name="&gt;&gt;C_Options_label_bits.Name" xml:space="preserve">
     <value>C_Options_label_bits</value>
@@ -880,13 +880,13 @@ Denoising option</value>
     <value>7, 21</value>
   </data>
   <data name="D_options_label_bits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
+    <value>105, 13</value>
   </data>
   <data name="D_options_label_bits.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="D_options_label_bits.Text" xml:space="preserve">
-    <value>Last significant bits:</value>
+    <value>Least significant bits:</value>
   </data>
   <data name="&gt;&gt;D_options_label_bits.Name" xml:space="preserve">
     <value>D_options_label_bits</value>

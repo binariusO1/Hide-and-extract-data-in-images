@@ -419,9 +419,9 @@ System::Void WindowCoding::listBox1_DragEnter_C_listBox_Main(System::Object^ sen
 	}
 }
 
-	//-------------------------------------------------
-	//		C_Hide
-	//-------------------------------------------------
+//-------------------------------------------------
+//		C_Hide
+//-------------------------------------------------
 System::Void WindowCoding::listBox1_DragDrop_C_listBox_Hide(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
 	this->C_Hide_listBox->Items->Clear();
@@ -482,9 +482,9 @@ System::Void WindowCoding::C_button_Process_Start(System::Object^ sender, System
 	}
 }
 
-	//-------------------------------------------------
-	//		D
-	//-------------------------------------------------
+//-------------------------------------------------
+//		D
+//-------------------------------------------------
 System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e)
 {
 	this->D_listBox->Items->Clear();
@@ -506,7 +506,7 @@ System::Void WindowCoding::listBox1_DragDrop_D_listBox(System::Object^ sender, S
 	else
 		this->D_button_Process->Enabled = false;
 
-	if (this->D_options_checkBox->Enabled == false && (*extensionDecoding == "gpj." || *extensionDecoding == "gepj") )
+	if (this->D_options_checkBox->Enabled == false && (*extensionDecoding == "gpj." || *extensionDecoding == "gepj"))
 		this->D_options_checkBox->Enabled = true;
 	else
 		this->D_options_checkBox->Enabled = false;
@@ -560,9 +560,9 @@ System::Void WindowCoding::D_button_Process_Start(System::Object^ sender, System
 	System::Windows::Forms::Cursor::Current = System::Windows::Forms::Cursors::Default;
 }
 
-	//-------------------------------------------------
-	//		OTHER
-	//-------------------------------------------------
+//-------------------------------------------------
+//		OTHER
+//-------------------------------------------------
 int WindowCoding::checkFile(std::string path)
 {
 	std::fstream file;
